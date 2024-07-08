@@ -1,0 +1,65 @@
+
+
+.avis_commentaire {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.avis {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.commentaire {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+}
+
+.commentaire p {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profile h3 {
+    font-size: 1em;
+    color: #333;
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .avis {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .commentaire {
+        margin: 10px 0;
+    }
+}

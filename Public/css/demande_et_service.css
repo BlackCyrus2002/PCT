@@ -1,0 +1,155 @@
+:root{
+    --colorfar:rgb(255, 72, 0);
+     
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+
+body{
+    text-align: center;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../image/image_carousel5.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+    z-index: -1;
+}
+
+
+
+
+
+form{
+
+    height: 600px;
+    width: 40%;
+    background-color: rgb(218, 210, 210);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px var(--colorfar) solid;
+    border-radius: 20px;
+}
+
+
+.title {
+    color: var(--colorfar);
+    border-bottom: 5px solid var(--colorfar);
+    padding-bottom: 5px;
+}
+
+
+
+form .form-controle{
+    display: flex;
+     justify-content: space-between;
+     align-items: center;
+    width: 70%;
+ 
+}
+
+form .form-controle input{
+
+      padding: 5px;
+      border-radius: 5px;
+      border: none;
+      height: 30px;
+      width: 100%;
+
+}
+
+.message{
+    width: 80%;
+}
+
+.message textarea{
+    height: 150px;
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+.btn {
+    width: 100%;
+}
+.btn button{
+    padding: 5px;
+    background-color: var(--colorfar);
+    width:40%;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.btn button:hover{
+    background-color:white;
+    color: var(--colorfar);
+    border: 1px solid var(--colorfar);
+}
+
+
+
+@media(max-width:1024px) {
+
+
+ form .form-controle{
+       display: contents;
+      
+     
+    }
+
+    form .form-controle input{
+    width: 60%;
+    }
+}
+    
+
+
+@media (max-width:425px) {
+    form{
+        width: 80%;
+    } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
