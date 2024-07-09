@@ -41,7 +41,7 @@
                 <img src="../../Public/image/profile1.jpg" alt="Profile Picture">
                 <span>Ouedraogo Ibrahim</span>
             </div>
-            <p>23 juin 2024 à 16h30</p>
+            <p>23 juin 2024 à 16h35</p>
             <iframe src="https://www.youtube.com/embed/b3-BqyvALSg?si=wZfpDIpDvQ00ca0B" title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
