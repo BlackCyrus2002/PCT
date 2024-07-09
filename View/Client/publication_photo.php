@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>publication photo</title>
+    <title>Publication photo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../../Public/css/publication.css">
 </head>
@@ -35,7 +35,7 @@
 
         <div class="post photo">
             <div class="profile-info">
-                <img src="profile1.jpg" alt="Profile Picture">
+                <img src="../../Public/image/profile1.jpg" alt="Profile Picture">
                 <span>Ouedraogo Ibrahim</span>
             </div>
             <p>23 juin 2024 à 16h30</p>
@@ -83,18 +83,18 @@
             <h3>Catégorie</h3>
 
             <ul>
-                <li><a href="#">pays<i class="fa-solid fa-caret-down"></i></a></li>
-                <li><a href="#">ville<i class="fa-solid fa-caret-down"></i></a></li>
-                <li><a href="#">commune<i class="fa-solid fa-caret-down"></i></a></li>
-                <li><a href="#">quartier<i class="fa-solid fa-caret-down"></i></a></li>
+                <li><a href="#">Pays<i class="fa-solid fa-caret-down"></i></a></li>
+                <li><a href="#">Ville<i class="fa-solid fa-caret-down"></i></a></li>
+                <li><a href="#">Commune<i class="fa-solid fa-caret-down"></i></a></li>
+                <li><a href="#">Quartier<i class="fa-solid fa-caret-down"></i></a></li>
             </ul>
 
             <h3>Métier</h3>
             <ul>
-                <li><a href="#">menuisiers<i class="fa-solid fa-caret-down"></i></a></li>
-                <li><a href="#">coiffeurs<i class="fa-solid fa-caret-down"></i></a></li>
-                <li><a href="#">coutures<i class="fa-solid fa-caret-down"></i></a></li>
-                <li><a href="#">poissonniers<i class="fa-solid fa-caret-down"></i></a></li>
+                <li><a href="#">Ménuisiers<i class="fa-solid fa-caret-down"></i></a></li>
+                <li><a href="#">Coiffeurs<i class="fa-solid fa-caret-down"></i></a></li>
+                <li><a href="#">Coutures<i class="fa-solid fa-caret-down"></i></a></li>
+                <li><a href="#">Poissonniers<i class="fa-solid fa-caret-down"></i></a></li>
             </ul>
 
             <div class="voir_plus">

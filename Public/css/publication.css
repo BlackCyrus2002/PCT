@@ -1,437 +1,378 @@
 /* Media Queries */
 
 :root {
-    --colorfar: rgb(229, 131, 3);
+  --colorfar: rgb(229, 131, 3);
 }
 
 * {
-    padding: auto;
-    margin: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
+  padding: auto;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 header {
-    border-bottom: solid 1px;
+  border-bottom: solid 1px;
 }
 
 header .recherche {
-    width: 100%;
-    text-align: right;
-    padding-right: 50px;
+  width: 100%;
+  text-align: right;
+  padding-right: 50px;
 }
 
 header .recherche input {
-    margin-right: 200px;
-    padding: 10px;
-    width: 500px;
-    border-radius: 20px;
-    border: solid var(--colorfar);
-    background-color: rgb(199, 192, 192);
-    cursor: pointer;
+  margin-right: 200px;
+  padding: 10px;
+  width: 500px;
+  border-radius: 20px;
+  border: solid var(--colorfar);
+  background-color: rgb(199, 192, 192);
 }
 
-.recherche i{
-    font-size: 25px;
+.recherche i {
+  font-size: 25px;
 }
 
 .recherche i:hover {
-    color: var(--colorfar);
+  color: var(--colorfar);
 }
 
 .menu_icon {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-    padding: 10px;
-
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  padding: 10px;
 }
 
 .menu_icon a {
-
-    padding: 10px;
-    color: black;
+  padding: 10px;
+  color: black;
 }
 
-.menu_icon i{
-
-    margin-left: 100px;
-    font-size: 30px;
-    cursor: pointer;
-    transition: 0.5s;
-
+.menu_icon i {
+  margin-left: 100px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
-.menu_icon i:hover{
-    transform:rotate(360deg)
-
+.menu_icon i:hover {
+  transform: rotate(360deg);
 }
 
- .indicator {
-
-    width: 50px; /* Adjust this to match the width of the icons */
-    height: 5px;
-    background-color: orange;
-    transition: transform 0.3s ease;
+.indicator {
+  width: 50px; /* Adjust this to match the width of the icons */
+  height: 5px;
+  background-color: orange;
+  transition: transform 0.3s ease;
 }
 
 /* pour la translation de la bar en orange*/
 .image_arriereplan {
-    background: linear-gradient(rgba(245, 93, 5, 0.5), rgba(245, 93, 5, 0.5)), url(../image/image_carousel4.jpg) no-repeat center;
-    background-size: cover;
-    height: 100px;
+  background: linear-gradient(rgba(245, 93, 5, 0.5), rgba(245, 93, 5, 0.5)),
+    url(../image/image_carousel4.jpg) no-repeat center;
+  background-size: cover;
+  height: 100px;
 }
 
 /* menu sidebar */
 .sidebar {
-    background-color: #b16219f3;
-    padding: 20px;
-    width: 100%;
-    max-width: 300px;
-    position: absolute;
-    top: 70px;
-    right: 50px;
-    opacity: 1;
-    z-index: 8;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    box-shadow: 0px 0px 60px #2a2623;
-    border-radius: 10px;
-    transition: 0.7s;
-    transform: translateX(400px);
+  background-color: #b16219f3;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  position: absolute;
+  top: 70px;
+  right: 50px;
+  opacity: 1;
+  z-index: 8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 0px 0px 60px #2a2623;
+  border-radius: 10px;
+  transition: 0.7s;
+  transform: translateX(400px);
 }
 
 .sidebar i {
-    width: 100%;
-    text-align: right;
-    font-size: 20px;
-    cursor: pointer;
+  width: 100%;
+  text-align: right;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .sidebar h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
 }
 
 .sidebar ul {
-    list-style: none;
-    padding: 0;
-    overflow-y: scroll;
+  list-style: none;
+  padding: 0;
+  overflow-y: auto;
 }
 
 .sidebar li {
-    margin-bottom: 10px;
-    text-align: center;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .sidebar p {
-    text-align: right;
+  text-align: right;
 }
 
 .sidebar .fa-solid.fa-xmark {
-    width: 20px;
-    text-align: center;
-    left: 200px;
-    border-radius: 20px;
-    transition: 0.5s;
+  width: 20px;
+  text-align: center;
+  left: 200px;
+  border-radius: 20px;
+  transition: 0.5s;
 }
 
 .sidebar .fa-solid.fa-xmark:hover {
-    color: red;
-    transform: rotate(180deg);
+  color: red;
+  transform: rotate(180deg);
 }
 
 .sidebar li a {
-    text-decoration: none;
-    font-size: large;
-    font-weight: bold;
-    color: #000;
-    transition: 0.5s;
+  text-decoration: none;
+  font-size: large;
+  font-weight: bold;
+  color: #000;
+  transition: 0.5s;
 }
 
 .sidebar li a:hover {
-    color: white;
+  color: white;
 }
 
 .voir_plus {
-    text-align: center;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .voir_plus a {
-    text-decoration: none;
-    color: #007BFF;
+  text-decoration: none;
+  color: #007bff;
 }
 
 /* Responsive CSS */
 @media (max-width: 1200px) {
-    .sidebar {
-        max-width: 250px;
-        right: 20px;
-    }
+  .sidebar {
+    max-width: 250px;
+    right: 20px;
+  }
 }
 
 @media (max-width: 600px) {
-    .sidebar {
-        max-width: 200px;
-        right: 10px;
-        top: 50px;
-        padding: 10px;
-    }
-    
-    header .recherche input {
-        width: 100%;
-    }
+  .sidebar {
+    max-width: 200px;
+    right: 10px;
+    top: 50px;
+    padding: 10px;
+  }
 
-    .menu_icon i {
-        margin-left: 50px;
-        font-size: 25px;
-    }
+  header .recherche input {
+    width: 100%;
+  }
 
-    .sidebar li a {
-        font-size: medium;
-    }
+  .menu_icon i {
+    margin-left: 50px;
+    font-size: 25px;
+  }
+
+  .sidebar li a {
+    font-size: medium;
+  }
 }
-
-
-
-
 
 /* ici c'est le style pour le cadre video*/
 
 .post {
-    background-color: #d0c7c7de;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    display: inline-block;
-   margin: 20px;
-    vertical-align: top;
-    
+  background-color: #d0c7c7de;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  margin: 20px;
+  vertical-align: top;
 }
 .post img {
-    width: 100%;
-    border-radius: 10px;
-    border: solid 1px;
+  width: 100%;
+  border-radius: 10px;
+  border: solid 1px;
 }
 .post .profile-info {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 .post .profile-info img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 .post .profile-info span {
-    font-weight: bold;
+  font-weight: bold;
 }
 .post .actions {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-
-
- 
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 .post .actions i {
-    cursor: pointer;
-    transition: 0.3s;
+  cursor: pointer;
+  transition: 0.3s;
 }
 .post .actions i:hover {
-    color: #ff7e00;
+  color: #ff7e00;
 }
 
-.post .actions .fa-thumbs-up.active{
-    color: #ff7e00;
+.post .actions .fa-thumbs-up.active {
+  color: #ff7e00;
 }
-
 
 /* sous menu quand on clique sur partager*/
 
-.post .navbar{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 25px;
-    margin-top: 10px;
-    background-color: white;
-    border-radius: 10px;
-    transition: 0.5s;
-    margin-bottom: 5px;
-    clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
-
+.post .navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 25px;
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 10px;
+  transition: 0.5s;
+  margin-bottom: 5px;
+  clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
 }
 
- .post .navbar.active{
-    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-    
+.post .navbar.active {
+  clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
 }
 
-.navbar .fa-brands.fa-whatsapp{
-    color: green;
-
+.navbar .fa-brands.fa-whatsapp {
+  color: green;
 }
 
-
-.navbar .fa-brands.fa-instagram{
-    color:rgb(74, 5, 80);
+.navbar .fa-brands.fa-instagram {
+  color: rgb(74, 5, 80);
 }
 
-.navbar a{
-    text-align: center;
-    display: flex;
-    padding: 5px;
-    text-decoration: none;
-
+.navbar a {
+  text-align: center;
+  display: flex;
+  padding: 5px;
+  text-decoration: none;
 }
 
-.post .navbar i{
-  
-    transition: 0.5s;
+.post .navbar i {
+  transition: 0.5s;
 }
 
-.post .navbar i:hover{
-    transform: translateY(-3px);
+.post .navbar i:hover {
+  transform: translateY(-3px);
 }
-
-
 
 .comments-section {
-    display: flex;
-    flex-direction: column;
-    margin-top: 15px;
-    background-color: #736f6fde;
-    position: absolute;
-    transition: 0.5s;
-    overflow: scroll;
-    padding: 10px;
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
- 
-
- 
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  background-color: #736f6fde;
+  position: absolute;
+  transition: 0.5s;
+  overflow: scroll;
+  padding: 10px;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 
-.comments-section.active{
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);  
+.comments-section.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
-.comments-section input[type="text"], .comments-section input[type="email"], .comments-section input[type="text"] {
-   
-    padding: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    
-
+.comments-section input[type="text"],
+.comments-section input[type="email"],
+.comments-section input[type="text"] {
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-
-.comments-section input{
-    transition: 0.3s;
+.comments-section input {
+  transition: 0.3s;
 }
 .comments-section button {
-    padding: 10px;
-    border: none;
-    background-color: #ff7e00;
-    color: #ffffff;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100px;
-
+  padding: 10px;
+  border: none;
+  background-color: #ff7e00;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
 }
 .comments-section button:hover {
-    background-color: #ff6500;
- 
-   
+  background-color: #ff6500;
 }
-.comments{
-    background-color: #f9f9f9;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    width: 200px;
-    overflow-y: visible;
-    height: 50px;
+.comments {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  overflow-y: visible;
+  height: 50px;
 }
 
 .footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #ffffff;
-    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
-.post iframe{
-    width: 250px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: 3px solid orange;
-    border-radius: 10px;
-
-    
+.post iframe {
+  width: 250px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 3px solid orange;
+  border-radius: 10px;
 }
 
-
-.contacter{
-    
-
-    position: relative;
-    left: 65px;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 10px;
-    background-color: rgb(255, 115, 0);
-    border-radius: 20px;
-    border: solid 1px;
-    cursor: pointer;
-    transition: 0.3s;
-
+.contacter {
+  position: relative;
+  left: 65px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  background-color: rgb(255, 115, 0);
+  border-radius: 20px;
+  border: solid 1px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.contacter:hover{
-    background-color: white;
-    color:  rgb(255, 115, 0);
-    border:solid 1px;
-    font-size: 21px;
-
-    
+.contacter:hover {
+  background-color: white;
+  color: rgb(255, 115, 0);
+  border: solid 1px;
+  font-size: 21px;
 }
 
-.post .photo{
-    width: 250px;
-    border: solid 1px;
-    height: 177px;
-    border-radius: 10px;
+.post .photo {
+  width: 250px;
+  border: solid 1px;
+  height: 177px;
+  border-radius: 10px;
 }
-
 
 /* apparition des element di site*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

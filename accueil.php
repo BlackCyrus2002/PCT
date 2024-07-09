@@ -106,7 +106,7 @@
         <div class="float1 apparaitre">
             <img src="Public/image/pot_argile.jpg" alt="" />
             <div class="promotion">
-                <h3><span>pormo</span>tion</h3>
+                <h3><span>Promo</span>tion</h3>
                 <p>
                     Mon artisan est une plateforme dédiée à promouvoir les métiers
                     artisanaux de la côte d'ivoire voir l'auto promotion des biens et
@@ -118,7 +118,7 @@
         <!-- avantage et image-->
         <div class="float2 apparaitre" id="avantage">
             <div class="avantage">
-                <h3>avantage</h3>
+                <h3>Avantage</h3>
                 <p>
                     La plateforme vous permet de bénéficier de nombreux avantages afin
                     de vous fournir un usage responsable et de qualité.
