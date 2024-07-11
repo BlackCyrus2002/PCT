@@ -111,7 +111,27 @@ liker.addEventListener('click',function(){
     liker.classList.toggle('active')
 })
 
-const menu_icon=document.getElementByIdAll('.menu_icon i')
 
-console.log(menu_icon)
+const contacter_video =document.querySelector('.post .click-video')
+const contacter_photo =document.querySelector('.post .click-photo')
+
+
+contacter_video.addEventListener('click',function(){
+  window.location.href = "../html/demande_et_service.html";
+})
+
+
+contacter_photo.addEventListener('click',function(){
+    window.location.href = "../html/demande_et_service.html";
+  })
+
+
+
+
+
+
+
+
+
+
 

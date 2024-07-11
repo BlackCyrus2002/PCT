@@ -2,38 +2,29 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publication</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="../../Public/css/publication.css">
+    <?php require('head.php') ?>
+    <title>Publication vidéo</title>
 </head>
 
 <body>
 
     <!--partie de l'entete-->
     <header>
-        <h1>logo</h1>
-        <div class=" recherche visibility"><input type="search" placeholder="recherche d'artisans" class="apparaitre">
-            <i class="fa-solid fa-ellipsis"></i>
-
+        <div>
+            <div class="logo"><img src="../../Public/image//logo.jpg" alt=""></div>
         </div>
-        <nav class="menu_icon visibility">
-            <a href="../../accueil.php"><i class="fa-solid fa-house-chimney"></i></a>
-            <a href="publication_photo.php"><i class="fa-regular fa-image"></i></a>
-            <a href=""> <i class="fa-solid fa-location-dot"></i></a>
-
-
-
-        </nav>
+        <?php require('search.php') ?>
+        <?php require('nav.php') ?>
     </header>
 
 
     <section>
-        <div class="image_arriereplan"></div>
+        <div class="image_arriereplan">
+            <p>entrez en contacte avec tout les artizans que vous souhaitez !</p>
+        </div>
     </section>
 
-    <section class="video ou photo visibility">
+    <section class="multimedia visibility">
 
         <div class="post video">
             <div class="profile-info">
@@ -60,7 +51,7 @@
                         id="whatsapp"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram" id="instagram"></i></a>
             </div>
-            <button class="contacter">Contacter</button>
+            <button class="click-video">Contacter</button>
             <div class="comments-section">
 
                 <input type="text" id="comment-name" placeholder="Your Name">
@@ -70,38 +61,11 @@
                 <div class="comments"></div>
             </div>
         </div>
+
+
     </section>
 
-    <sidebar>
-        <div class="sidebar">
-            <p><i class="fa-solid fa-xmark" id="closemenu"></i></p>
-            <h2> Option de triage</h2>
-            <i class="fa-solid fa-filter"></i>
-            <h3>Categorie</h3>
-
-            <ul>
-                <li><a href="#">pays<i class="fa-solid fa-caret-down"></i></a></li>
-                <li><a href="#">ville<i class="fa-solid fa-caret-down"></i></a></li>
-                <li><a href="#">commune<i class="fa-solid fa-caret-down"></i></a></li>
-                <li>
-                    <auaref="#">quartier<i class="fa-solid fa-caret-down"></i></a>
-                </li>
-            </ul>
-
-            <h3>Metier</h3>
-            <ul>
-                <li><a href="#">menuisiers<i class="fa-solid fa-caret-down"></i></a></li>
-                <li><a href="#">coiffeurs<i class="fa-solid fa-caret-down"></i></a></li>
-                <li><a href="#">coutures<i class="fa-solid fa-caret-down"></i></a></li>
-                <li><a href="#">poissonniers<i class="fa-solid fa-caret-down"></i></a></li>
-            </ul>
-
-            <div class="voir_plus">
-                <a href="#">Voir plus</a>
-            </div>
-        </div>
-    </sidebar>
-    <script src="../../Public/js/publication.js"></script>
+    <?php require('footer.php') ?>
 </body>
 
 </html>

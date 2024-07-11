@@ -8,8 +8,10 @@
   padding: auto;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
   overflow-x: hidden;
-  overflow-y: auto;
 }
 
 header {
@@ -20,6 +22,8 @@ header .recherche {
   width: 100%;
   text-align: right;
   padding-right: 50px;
+  margin-top: 50px;
+  border: solid;
 }
 
 header .recherche input {
@@ -45,6 +49,7 @@ header .recherche input {
   justify-content: center;
   margin-bottom: 10px;
   padding: 10px;
+  border: solid;
 }
 
 .menu_icon a {
@@ -72,10 +77,50 @@ header .recherche input {
 
 /* pour la translation de la bar en orange*/
 .image_arriereplan {
-  background: linear-gradient(rgba(245, 93, 5, 0.5), rgba(245, 93, 5, 0.5)),
+  background: linear-gradient(rgba(245, 93, 5, 0.5), rgba(7, 7, 7, 0.5)),
     url(../image/image_carousel4.jpg) no-repeat center;
   background-size: cover;
   height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid;
+}
+
+.image_arriereplan p {
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.logo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 100px;
+}
+
+.logo {
+  height: 150px;
+  width: 150px;
+
+  position: absolute;
+  overflow-y: hidden;
+  left: 20px;
+  top: 20px;
+  border-radius: 100px;
+
+  animation: cisailler infinite 5s;
+  -webkit-box-reflect: right
+    linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+}
+
+@keyframes cisailler {
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 /* menu sidebar */
@@ -94,8 +139,8 @@ header .recherche input {
   justify-content: space-around;
   box-shadow: 0px 0px 60px #2a2623;
   border-radius: 10px;
-  transition: 0.7s;
-  transform: translateX(400px);
+  transition: 0.5s;
+  transform: translateX(700px);
 }
 
 .sidebar i {
@@ -115,7 +160,6 @@ header .recherche input {
 .sidebar ul {
   list-style: none;
   padding: 0;
-  overflow-y: auto;
 }
 
 .sidebar li {
@@ -172,7 +216,7 @@ header .recherche input {
 
 @media (max-width: 600px) {
   .sidebar {
-    max-width: 200px;
+    width: 200px;
     right: 10px;
     top: 50px;
     padding: 10px;
@@ -348,7 +392,8 @@ header .recherche input {
   border-radius: 10px;
 }
 
-.contacter {
+.post .click-video,
+.post .click-photo {
   position: relative;
   left: 65px;
   font-size: 20px;
@@ -361,7 +406,8 @@ header .recherche input {
   transition: 0.3s;
 }
 
-.contacter:hover {
+.post .click-video:hover,
+.post .click-photo:hover {
   background-color: white;
   color: rgb(255, 115, 0);
   border: solid 1px;

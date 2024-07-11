@@ -24,6 +24,7 @@
   }
 
   /*parti header*/
+
   
   header{
   
@@ -34,6 +35,33 @@
     height:700px;
   
   
+  }
+
+   .logo{
+   height: 150px;
+   width:150px;
+   position: absolute;
+   left: 30px;
+   border-radius: 100px;
+   animation: cisailler infinite  5s ;
+   box-shadow: 0px 0px 60px black;
+   -webkit-box-reflect: right linear-gradient(to left , rgba(0,0,0,0.0), rgba(0,0,0,0.1));
+
+   }
+   
+   @keyframes cisailler {
+       50%{
+         transform: translateY(-10px);
+         
+       }
+     }
+
+  .logo img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
   }
   
  /* contenu ne l'entete*/
@@ -79,7 +107,7 @@
   font-weight: bold;
   color: var(--colorfar);
   text-decoration: none;
-  transition: 0.3s
+  transition: 0.3s;
 }
   
 .container ul li a:hover{
@@ -119,24 +147,8 @@ justify-content: space-around;
   margin-left: 10px;
   font-size: 15px;
 }
-.art{
-  padding: 10px;
-  border-radius: 10px;
-  border: none;
-  color: var(--colorfar);
-  font-weight: bold;
-  text-transform: capitalize;
-  transition: 0.5s;
-  cursor: pointer;
-  margin-left: 10px;
-  font-size: 15px;
-}
 
 .recherche button:hover{
-  background-color: var(--colorfar);
-  color: white;
-}
-.art:hover{
   background-color: var(--colorfar);
   color: white;
 }
@@ -390,6 +402,7 @@ text-align: center;
 align-items: center;
 justify-content: center;
 margin-bottom: 40px;
+overflow-x: hidden;
  
 }
 
@@ -535,6 +548,7 @@ align-items: center;
 .avis h1{
   border-bottom: 4px solid var(--colorfar) ;
   width: 55px;
+  text-align: center;
 }
 
 
@@ -568,6 +582,7 @@ align-items: center;
   margin: 0 10px;
   animation: cisailler infinite  5s ;
   height: 300px;
+
 
 }
 
@@ -649,7 +664,7 @@ padding: 10px;
     display: flex;
     flex-direction: column;
     height: 500px;
-    margin-top: 200px;
+    margin-top: 100px;
   }
   
 }
@@ -659,11 +674,7 @@ padding: 10px;
 
 @media(max-width: 1024px){
 
- 
-
- 
-
-  .container2 .photo2 img{
+  .container2 .photo2 img ,.logo{
     display: none;
   }
   .container2 .photo1 img{
@@ -679,7 +690,9 @@ padding: 10px;
 
 @media screen and (max-width: 768px) {
 
-
+ .container2 .text{
+  font-size: 30px;
+}
   .localisation {
       flex-direction: column;
       align-items: center;
@@ -747,6 +760,10 @@ padding: 10px;
   width: 50%;
 }
 
+.commentaires{
+  margin-top: 50px;
+}
+
 .creations{
   width: 100%;
   display: flex;
@@ -759,7 +776,9 @@ padding: 10px;
 
 .creations .creation ,.creations .service , .creations .contact{
 
-width: 50%;}
+width: 50%;
+border: solid;
+}
 
 
 
@@ -863,6 +882,11 @@ display: none;
   flex-direction: column;
 }
 
+.commentaires{
+  border: solid;
+  height: 900px;
+}
+
 }
 
 
@@ -870,7 +894,7 @@ display: none;
 @media (max-width:425px) {
   .creations{
     border: solid;
-    width: 100%;
+    width: 120%;
 
 
   }
@@ -880,13 +904,40 @@ display: none;
   width: 80%;
   
   }
+
+.avis{
+  width: 120%;
+}
+
+
+  
 }
     
+@media (max-width:438px) {
+  
+
+  footer,.commentaires{
+   width: 120%;
+  }
+}
 
 
+@media (max-width:320px) {
+  footer, .commentaires,.creations,.avis , .carte, .localisation,.offre{
+    width: 150%;
+   }
+
+   .creations{
+    border: solid;
+   }
+  
+
+   .pourquoi{
+    width: 140%;
+   }
 
 
-
+  }
 
 
 
