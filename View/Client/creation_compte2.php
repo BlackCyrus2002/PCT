@@ -1,4 +1,6 @@
 <?php require_once('../../App/Config/database.php') ?>
+<?php require_once('error_message.php') ?>
+<?php require_once('../../App/Model/art_insc1.php') ?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -19,11 +21,19 @@
 
     <section>
 
-        <form action="">
+        <form action="" method="post" enctype="multipart/form-data">
+            <div>
+                <span style="color:green">
+                    <?php echo $error_message ?>
+                </span><br>
+            </div>
             <h3 style="color: orangered;">Suite</h3>
             <div>
-                <label for="dur_act">Dépuis combien de temps exercez vous ce metier ?</label>
-                <input type="number" name="dur_act" id="dur_act" class="form-control"><br>
+                <label for="dur_act">Dépuis combien d'années exercez-vous ce métier ?</label>
+                <input type="number" name="dur_act" id="dur_act" class="form-control">
+                <span style="color:red">
+                    <?php echo $duree_error ?>
+                </span><br>
             </div>
 
             <div>
@@ -34,52 +44,76 @@
                     <option value="Lundi au Samedi">Lundi au Samedi</option>
                     <option value="Samedi et Dimanche">Samedi et Dimanche</option>
                     <option value="Tous les jours">Tous les jours</option>
-                </select><br>
+                </select>
+                <span style="color:red">
+                    <?php echo $jour_error ?>
+                </span><br>
             </div>
 
             <div class="row"><br>
                 <h4>Quelle est votre localisation geographique ?</h4>
                 <div class="col-md-6">
                     <label for="pays">Pays</label>
-                    <input type="text" name="pays" id="pays" class="form-control"><br>
+                    <input type="text" name="pays" id="pays" class="form-control">
+                    <span style="color:red">
+                        <?php echo $pays_error ?>
+                    </span><br>
 
                 </div>
                 <div class="col-md-6">
                     <label for="ville">Ville</label>
-                    <input type="text" name="ville" id="ville" class="form-control"><br>
+                    <input type="text" name="ville" id="ville" class="form-control">
+                    <span style="color:red">
+                        <?php echo $ville_error ?>
+                    </span><br>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6">
                     <label for="commune">Commune</label>
-                    <input type="text" name="commune" id="commune" class="form-control"><br>
+                    <input type="text" name="commune" id="commune" class="form-control">
+                    <span style="color:red">
+                        <?php echo $commune_error ?>
+                    </span><br>
                 </div>
                 <div class="col-md-6">
                     <label for="quartier">Quartier</label>
-                    <input type="text" name="quartier" id="quartier" class="form-control"><br>
+                    <input type="text" name="quartier" id="quartier" class="form-control">
+                    <span style="color:red">
+                        <?php echo $quartier_error ?>
+                    </span><br>
                 </div>
             </div>
 
 
             <div>
-                <h4>Information de connexion</h4><br>
+                <h4>Information de connexion</h4>
             </div>
             <div class="row">
                 <div class="col-md-6">
                     <label for="gmail">Email</label>
-                    <input type="email" name="gmail" id="gmail" class="form-control"><br>
+                    <input type="email" name="gmail" id="gmail" class="form-control">
+                    <span style="color:red">
+                        <?php echo $email_error ?>
+                    </span><br>
+                    <span style="color:red">
+                        <?php echo $email_exist ?>
+                    </span><br>
                 </div>
                 <div class="col-md-6">
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Mot de passe</label>
-                        <input type="text" class="form-control" name="password" id="password" placeholder="********" />
-                    </div>
+                    <label for="password_user">Mot de passe</label>
+                    <input type="password" class="form-control" name="password_user" id="password_user"
+                        placeholder="********" />
+                    <span style="color:red">
+                        <?php echo $password_error ?>
+                    </span><br>
 
                 </div>
             </div>
             <div style="display: flex;align-items:center">
                 <div>
-                    <input type="checkbox" class="form-check-input" style="margin-right:5px" name="accept" id="accept">
+                    <input type="checkbox" class="form-check-input" style="margin-right:5px" name="accept" id="accept"
+                        value="J'accepte">
                 </div>
                 <div>
                     <label for="accept">
@@ -89,13 +123,21 @@
                     </label>
                 </div>
             </div>
-
+            <div>
+                <span style="color:red">
+                    <?php echo $accept_error ?>
+                </span><br>
+            </div>
 
             <div>
                 <center>
-                    <button class="btn btn-warning">S'inscrire</button>
+                    <button class="btn btn-warning" name="inscrire" id="inscrire">S'inscrire</button>
                 </center>
             </div>
+            <span style="color:red">
+                <?php echo $error_message ?>
+            </span><br>
+
 
         </form>
     </section>

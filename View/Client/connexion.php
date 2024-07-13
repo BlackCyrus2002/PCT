@@ -1,54 +1,86 @@
+<?php require_once('../../App/Config/database.php') ?>
+<?php require_once('error_message.php') ?>
+<?php require_once('../../App/Model/login.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connection</title>
-
+    <title>Connexion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" href="../../Public/css/connexion.css">
 </head>
 
 <body>
-    <form action="">
-        <div class="creer_compte">
-            <div class="head">
-                <h2>Pas encore de compte ?</h2>
-                <p>Creez votre compte
-                    artisans gratuitement!!</p>
-                <a href="creation_compte.php">creer un compte</a>
+    <section class="form">
+        <div class="row">
+            <div class="col-md-6" style="padding-right:0px;padding-left:0px">
+                <div class="creer_compte">
+                    <div class="head">
+                        <h2>Pas encore de compte ?</h2>
+                        <p>Creez votre compte
+                            artisans gratuitement!!</p>
+                        <div class="container">
+                            <a href="creation_compte.php">Creer un compte</a>
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <div class="devenez">
+                            <p>Devenez un artisans dès maintement et profitez de notre offre et aussi des avantage
+                                que nous vous proposons
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class="btn">
+            <div class="col-md-6" style="padding-left:0px;padding-right:0px;">
+                <div class="enregistrement">
+                    <div class="container">
+                        <h1 style="font-family: 'Times New Roman', Times, serif;font-weight:bold">Connexion</h1><br>
 
+                        <form action="" method="post">
+                            <div>
+                                <input type="email" name="gmail" id="gmail" placeholder="@Email" class="form-control">
+                                <div style="text-align: left;margin-bottom:10px">
+                                    <span style="color: red;">
+                                        <?php echo $error_message ?>
+                                    </span>
+                                    <span style="color: red;">
+                                        <?php echo $email_error_connect ?>
+                                    </span><br>
+                                </div>
+                                <input type="password" name="password_user" id="password_user" placeholder="********"
+                                    class="form-control">
+                                <div style="text-align: left;margin-bottom:10px">
+                                    <span style="color: red;">
+                                        <?php echo $password_error_connect ?>
+                                    </span><br>
+                                </div>
+                            </div>
+                            <div style="text-align: left;">
+                                <input type="checkbox" class="form-check-input">
+                                <label for="coche">Enregistrer le mot de passe</label><br>
+                            </div>
 
-                <div class="devenez">
-                    <p>Devenez un artisans dès maintement et profitez de notre offre et aussi des avantage
-                        que nous vous proposons</p>
+                            <div class="google"><br>
+                                <img src="../../Public/image/google-1088004_640.png" alt=""><a href="#">Continuez avec
+                                    google</a>
+                            </div>
+                            <div id="pass_oubie"><a href="#">Mot de passe oublié?</a></div>
+                            <div id="connexion">
+                                <button name="login">Connexion</button>
+
+                            </div>
+                            <a href="../../accueil.php" class="btn btn-default">Revenir à la page d'accueil</a>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-
-
-        <div class="enregistrement">
-            <h2>Connexion</h2>
-
-            <div class="form-controle">
-                <input type="email" name="email" placeholder="adress mail">
-                <input type="password" name="password" placeholder="mot de passe">
-            </div>
-
-            <label for="coche"><input type="checkbox">Enregistrer le mot de passe</label>
-
-            <div class="google">
-                <img src="../../Public/image/google-1088004_640.png" alt=""><a href="#">continuez avec google</a>
-            </div>
-            <div id="pass_oubie"><a href="#">Mot de passe oublié?</a></div>
-            <div id="connexion">
-                <button>Connexion</button>
-            </div>
-        </div>
-
-    </form>
+    </section>
 </body>
 
 </html>

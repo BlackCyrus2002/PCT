@@ -1,9 +1,12 @@
+<?php require_once('../../App/Config/database.php') ?>
+<?php require_once('error_message.php') ?>
+<?php require_once('../../App/Model/all_art.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <?php require('head.php') ?>
-    <title>Maps Artisan</title>
+    <title>Localisation d'artisan </title>
 </head>
 
 <body>
@@ -24,7 +27,22 @@
     <br>
 
     <section style="padding: 5%;">
-        <div id="map" style="height: 400px; width: 100%;border-radius:10px;box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.267);z-index:1">
+
+        <?php
+        //Les positions des artisans sont collectées dans le tableau $positions
+
+        $positions = [];
+        while ($fil = mysqli_fetch_array($user)) {
+            $positions[] = [
+                'latitude' => $fil['latitude'],
+                'longitude' => $fil['longitude'],
+                'metier' => $fil['metier'],
+                'personne' => $fil['nom'] . ' ' . $fil['prenom']
+            ];
+        }
+        ?>
+        <div id="map"
+            style="height: 400px; width: 100%;border-radius:10px;box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.267);z-index:1">
         </div>
     </section>
 
@@ -32,40 +50,33 @@
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
     <script>
-        function initMap() {
-            var mapOptions = {
-                zoom: 12,
-                center: [0, 0]
-            };
+    function initMap() {
+        var mapOptions = {
+            zoom: 12,
+            center: [0, 0]
+        };
 
-            var map = L.map('map').setView(mapOptions.center, mapOptions.zoom);
+        var map = L.map('map').setView(mapOptions.center, mapOptions.zoom);
 
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; 2024 Mon artisan'
-            }).addTo(map);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; 2024 Mon artisan'
+        }).addTo(map);
 
-            var positions = [
-                [5.434429, -3.985790],
-                [5.427659, -3.986595],
-                [5.369792, -4.000857],
-                [5.411834, -4.019740],
-                [5.398162, -3.983176],
-                [5.446183, -3.998111],
-                [5.454386, -3.965495],
-                [5.420037, -3.957598],
-                [5.387225, -3.989527],
-                [5.377996, -3.957083]
-            ];
+        //Ce tableau est encodé en JSON et intégré dans le script JavaScript.
+        var positions = <?php echo json_encode($positions); ?>;
+        positions.forEach(function(pos) {
+            //le contenu du popup (popup) est construit en concaténant le métier et le nom de la personne, séparés par une balise <br> pour un retour à la ligne.
+            var popup = pos.metier + "<br>" + pos.personne;
 
-            positions.forEach(function(pos) {
-                var marker = L.marker([pos[0], pos[1]]).addTo(map)
-                    .bindPopup('artisan')
-                    .openPopup();
-            });
+            //Le script JavaScript utilise la longitude et la latitude pour placer les marqueurs sur la carte.
+            var marker = L.marker([pos.latitude, pos.longitude]).addTo(map)
+                .bindPopup(popup)
+                .openPopup();
+        });
 
-        }
+    }
 
-        document.addEventListener('DOMContentLoaded', initMap);
+    document.addEventListener('DOMContentLoaded', initMap);
     </script>
 
 </body>

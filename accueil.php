@@ -37,7 +37,9 @@
         <div class="container2 apparaitre">
             <div class="text">
                 <div>
-                    <p><strong>bien</strong>venu</p>
+                    <p>
+                        <dtrong>Bien</strong>venue
+                    </p>
                     <p>sur le site de l'entreprise 44</p>
                 </div>
             </div>
@@ -55,7 +57,9 @@
                     Recherche d'artisans
                 </a>
             </button>
-            <button id="connexion-mobile">Connexion</button>
+            <button id="connexion-mobile">
+                <a href="View/Client/connexion.php" style="text-decoration: none;display:block">Connexion</a>
+            </button>
         </div>
     </header>
     <!-- contient toutes les div pourquoi, offre, promotion ,avantage galerie  -->
