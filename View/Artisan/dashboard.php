@@ -5,8 +5,10 @@ require_once('../../App/Config/database.php');
 
 if (isset($_SESSION['user_id'])) {
     $id = $_SESSION['user_id'];
-    $users = $con->prepare("SELECT ID,gmail FROM connexions WHERE ID = ?");
-    $users->bind_param('i', $id);
+    $artisan = $_SESSION['artisan_id'];
+    $users = $con->prepare("SELECT ID,nom,prenom,sexe,telephone,tel_wa,metier,deb_act,fin_act,longitude,
+            latitude,dur_act,jr_act,pays,ville,commune,quartier,gmail FROM artisans WHERE ID = ?");
+    $users->bind_param('i', $artisan);
     $users->execute();
     $result = $users->get_result();
 
@@ -39,9 +41,12 @@ if (!isset($_SESSION['user_id'])) {
 
 <body>
     <header>
-        <?php echo $only_user['ID']; ?>
+
         <?php echo $only_user['gmail']; ?>
         <br>
+        <?php echo $only_user['metier']; ?>
+        <br>
+        <?php echo $only_user['ville']; ?><br>
         <a href="../../App/Model/logout.php" class="btn btn-primary">
             Se déconnecter
         </a>

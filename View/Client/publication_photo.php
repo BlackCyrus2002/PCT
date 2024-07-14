@@ -1,3 +1,7 @@
+<?php require_once('../../App/Config/database.php') ?>
+<?php require_once('error_message.php') ?>
+<?php require_once('../../App/Model/all_art.php') ?>
+<?php require_once('../../App/Model/all_metier.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 

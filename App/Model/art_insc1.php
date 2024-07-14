@@ -67,7 +67,6 @@ if (isset($_POST['inscrire'])) {
                 $quartier,
                 $gmail
             );
-
             if ($req->execute()) {
                 $comptes = $con->prepare("SELECT ID FROM artisans WHERE gmail = ?");
                 $comptes->bind_param('s', $gmail);

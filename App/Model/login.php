@@ -8,19 +8,21 @@ if (isset($_POST['login'])) {
         $email = $_POST['gmail'];
         $password_user = $_POST['password_user'];
 
-        $req = $con->prepare("SELECT ID, password_user FROM connexions WHERE gmail = ?");
+        $req = $con->prepare("SELECT ID,Artisans, password_user FROM connexions WHERE gmail = ?");
         $req->bind_param("s", $email);
         $req->execute();
         $req->store_result();
 
         if ($req->num_rows > 0) {
             // L'utilisateur existe, vérifions le mot de passe
-            $req->bind_result($id, $hashed_password);
+            $req->bind_result($id, $artisan, $hashed_password);
             $req->fetch();
 
             if (password_verify($password_user, $hashed_password)) {
                 // Mot de passe correct, démarrage de la session
                 $_SESSION['user_id'] = $id;
+                $_SESSION['artisan_id'] = $artisan;
+
 
                 // Définir des cookies pour se souvenir de l'utilisateur
                 setcookie("user_id", $id, time() + (3600), "/"); // 3600 = 1 heure

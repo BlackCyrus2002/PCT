@@ -12,18 +12,76 @@
         <h3>Catégorie</h3>
 
         <ul>
-            <li><a href="#">Pays<i class="fa-solid fa-caret-down"></i></a></li>
-            <li><a href="#">Ville<i class="fa-solid fa-caret-down"></i></a></li>
-            <li><a href="#">Commune<i class="fa-solid fa-caret-down"></i></a></li>
-            <li><a href="#">Quartier<i class="fa-solid fa-caret-down"></i></a></li>
-        </ul>
+            <li>
+                <a href="#">
+                    <div style="display: flex;align-items:center;justify-content:space-between">
+                        <div style="padding-left: 10px;">
+                            Pays
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div style="display: flex;align-items:center;justify-content:space-between">
+                        <div style="padding-left: 10px;">
+                            Ville
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div style="display: flex;align-items:center;justify-content:space-between">
+                        <div style="padding-left: 10px;">
+                            Commune
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div style="display: flex;align-items:center;justify-content:space-between">
+                        <div style="padding-left: 10px;">
+                            Quartier
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul><br>
+
 
         <h3>Métier</h3>
         <ul>
-            <li><a href="#">Ménuisiers<i class="fa-solid fa-caret-down"></i></a></li>
-            <li><a href="#">Coiffeurs<i class="fa-solid fa-caret-down"></i></a></li>
-            <li><a href="#">Coutures<i class="fa-solid fa-caret-down"></i></a></li>
-            <li><a href="#">Poissonniers<i class="fa-solid fa-caret-down"></i></a></li>
+            <?php while ($fil = mysqli_fetch_array($metier)) { ?>
+
+            <li>
+                <a href="#">
+                    <div style="display: flex;align-items:center;justify-content:space-between">
+                        <div style="padding-left: 10px;">
+                            <?php echo $fil['metier'] ?>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                    </div>
+
+                </a>
+            </li>
+
+            <?php } ?>
         </ul>
 
         <div class="voir_plus">

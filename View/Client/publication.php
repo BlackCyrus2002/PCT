@@ -1,3 +1,7 @@
+<?php require_once('../../App/Config/database.php') ?>
+<?php require_once('error_message.php') ?>
+<?php require_once('../../App/Model/all_art.php') ?>
+<?php require_once('../../App/Model/all_metier.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,7 +34,10 @@
                 <span>Ouedraogo Ibrahim</span>
             </div>
             <p>23 juin 2024 à 16h30</p>
-            <iframe src="https://www.youtube.com/embed/b3-BqyvALSg?si=wZfpDIpDvQ00ca0B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/b3-BqyvALSg?si=wZfpDIpDvQ00ca0B" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
             <div class="actions">
@@ -40,11 +47,19 @@
             </div>
 
             <div class="navbar">
-                <a href="https://www.facebook.com/share/V1k6Tfk4BZSK94P7/?mibextid=qi2Omg" target="_blank"><i class="fa-brands fa-facebook" id="facebook"></i></a>
-                <a href="https://wa.me/message/5I3ZLUZS6PZTO1" target="_blank"><i class="fa-brands fa-whatsapp" id="whatsapp"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram" id="instagram"></i></a>
+                <a href="https://www.facebook.com/share/V1k6Tfk4BZSK94P7/?mibextid=qi2Omg" target="_blank">
+                    <i class="fa-brands fa-facebook" id="facebook"></i>
+                </a>
+                <a href="https://wa.me/+225" target="_blank"><i class="fa-brands fa-whatsapp" id="whatsapp"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"
+                        id="instagram"></i></a>
             </div>
-            <button class="click-video">Contacter</button>
+            <a href="tel:+2250142068325">
+                <button class="click-video">
+                    Contacter
+                </button>
+            </a>
+
             <div class="comments-section">
 
                 <input type="text" id="comment-name" placeholder="Your Name">
@@ -58,7 +73,7 @@
 
         <div class="post photo">
             <div class="profile-info">
-                <img src="profile1.jpg" alt="Profile Picture">
+                <img src="../../Public/image/profile1.jpg" alt="Profile Picture">
                 <span>Ouedraogo Ibrahim</span>
             </div>
             <p>23 juin 2024 à 16h30</p>
@@ -70,11 +85,13 @@
                 <i class="fas fa-thumbs-up"></i>
                 <i class="fas fa-comment"></i>
                 <i class="fas fa-share"></i>
+
             </div>
 
             <div class="navbar">
-                <a href="https://www.facebook.com/share/V1k6Tfk4BZSK94P7/?mibextid=qi2Omg" target="_blank"><i class="fa-brands fa-facebook" id="facebook"></i></a>
-                <a href="https://wa.me/message/5I3ZLUZS6PZTO1" target="_blank"><i class="fa-brands fa-whatsapp" id="whatsapp"></i></a>
+                <a href="https://www.facebook.com/share/V1k6Tfk4BZSK94P7/?mibextid=qi2Omg" target="_blank"><i
+                        class="fa-brands fa-facebook" id="facebook"></i></a>
+                <a href="https://wa.me/+225" target="_blank"><i class="fa-brands fa-whatsapp" id="whatsapp"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram" id="instagram"></i></a>
             </div>
             <button class="click-photo">Contacter</button>
