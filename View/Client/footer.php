@@ -9,7 +9,7 @@
 
         <h2> Option de triage</h2>
         <i class="fa-solid fa-filter"></i>
-        <h3>Catégorie</h3>
+        <h3 style="font-family: 'Times New Roman', Times, serif;font-weight:bold">Catégorie</h3>
 
         <ul>
             <li>
@@ -63,7 +63,7 @@
         </ul><br>
 
 
-        <h3>Métier</h3>
+        <h3 style="font-family: 'Times New Roman', Times, serif;font-weight:bold">Métier</h3>
         <ul>
             <?php while ($fil = mysqli_fetch_array($metier)) { ?>
 

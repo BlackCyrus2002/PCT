@@ -30,7 +30,7 @@
                         <label for="nom">Nom</label>
                         <input type="text" class="form-control" required name="nom" id="nom">
                         <span style="color:red">
-                            <?php echo $nom_error ?>
+                            <?php echo $nom_error; ?>
                         </span><br>
                     </div>
                     <div class="col-md-6">
