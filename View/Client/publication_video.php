@@ -7,7 +7,7 @@
 
 <head>
     <?php require('head.php') ?>
-    <title>Publication vidéo</title>
+    <title>Publications vidéos</title>
 </head>
 
 <body>

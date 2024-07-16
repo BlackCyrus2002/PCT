@@ -7,7 +7,7 @@
 
 <head>
     <?php require('head.php') ?>
-    <title>Publication de photo</title>
+    <title>Publications photos</title>
 </head>
 
 <body>
@@ -59,14 +59,49 @@
                 <a href="#"><i class="fa-brands fa-instagram" id="instagram"></i></a>
             </div>
             <button class="click-photo">Contacter</button>
-            <div class="comments-section">
-
-                <input type="text" id="comment-name" placeholder="Your Name">
-                <input type="email" id="comment-email" placeholder="Your Email">
-                <input type="text" id="comment-input" placeholder="Add a comment">
-                <button>Commenter</button>
-                <div class="comments"></div>
+            <form action="">
+                <div class="comments-section">
+                    <input type="text" id="comment-name" placeholder="Votre nom">
+                    <input type="email" id="comment-email" placeholder="Votre email">
+                    <textarea name="" id="comment-input" class="commentaire" placeholder="commentaire">
+                    </textarea>
+                    <button>Commenter</button>
+                </div>
+            </form>
+        </div>
+        <div class="post photo">
+            <div class="profile-info">
+                <img src="../../Public/image/profile1.jpg" alt="Profile Picture">
+                <span>Ouedraogo Ibrahim</span>
             </div>
+            <p>23 juin 2024 à 16h30</p>
+
+            <div class="photo">
+
+            </div>
+            <div class="actions">
+                <i class="fas fa-thumbs-up"></i>
+                <i class="fas fa-comment"></i>
+                <i class="fas fa-share"></i>
+            </div>
+
+            <div class="navbar">
+                <a href="https://www.facebook.com/share/V1k6Tfk4BZSK94P7/?mibextid=qi2Omg" target="_blank"><i
+                        class="fa-brands fa-facebook" id="facebook"></i></a>
+                <a href="https://wa.me/message/5I3ZLUZS6PZTO1" target="_blank"><i class="fa-brands fa-whatsapp"
+                        id="whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram" id="instagram"></i></a>
+            </div>
+            <button class="click-photo">Contacter</button>
+            <form action="">
+                <div class="comments-section">
+                    <input type="text" id="comment-name" placeholder="Votre nom">
+                    <input type="email" id="comment-email" placeholder="Votre email">
+                    <textarea name="" id="comment-input" class="commentaire" placeholder="commentaire">
+                </textarea>
+                    <button>Commenter</button>
+                </div>
+            </form>
         </div>
 
     </section>
