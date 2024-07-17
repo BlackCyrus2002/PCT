@@ -133,14 +133,14 @@
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
     <script>
-    var map = L.map('map').setView([5.345317, -4.024429], 13); // Initial center
+    var map = L.map('map').setView([5.345317, -4.024429], 13); // Centre initial
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '© 2024 Mon artisan'
     }).addTo(map);
 
-    // Add geocoder search control
+    // Ajout du contrôle de recherche de géocodeur
     var geocoder = L.Control.Geocoder.nominatim();
     L.Control.geocoder({
             geocoder: geocoder,
@@ -164,7 +164,7 @@
         })
         .addTo(map);
 
-    // Get user's location
+    // Avoir la position de l'artisan 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
             var lat = position.coords.latitude;
@@ -175,7 +175,7 @@
         });
     }
 
-    // Handle map clicks
+    // Gérer les clics sur la carte pour la position (map cacher)
     var marker;
     map.on('click', function(e) {
         var lat = e.latlng.lat;
