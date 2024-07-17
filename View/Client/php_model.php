@@ -1,0 +1,10 @@
+<?php
+session_start();
+require_once('../../App/Config/database.php');
+require_once('error_message.php');
+require_once('../../App/Model/all_art.php');
+require_once('../../App/Model/all_metier.php');
+require_once('../../App/Model/coif_metier.php');
+require_once('../../App/Model/cout_metier.php');
+require_once('../../App/Model/mec_metier.php');
+require_once('../../App/Model/search.php');

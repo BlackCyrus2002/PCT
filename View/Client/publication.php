@@ -1,10 +1,4 @@
-<?php require_once('../../App/Config/database.php') ?>
-<?php require_once('error_message.php') ?>
-<?php require_once('../../App/Model/all_art.php') ?>
-<?php require_once('../../App/Model/all_metier.php') ?>
-<?php require_once('../../App/Model/coif_metier.php') ?>
-<?php require_once('../../App/Model/cout_metier.php') ?>
-<?php require_once('../../App/Model/mec_metier.php') ?>
+<?php require_once('php_model.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -387,6 +381,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
     </script>
+    <?php require_once('script_maps.php') ?>
 </body>
 
 </html>

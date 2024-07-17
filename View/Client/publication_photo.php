@@ -1,7 +1,4 @@
-<?php require_once('../../App/Config/database.php') ?>
-<?php require_once('error_message.php') ?>
-<?php require_once('../../App/Model/all_art.php') ?>
-<?php require_once('../../App/Model/all_metier.php') ?>
+<?php require_once('php_model.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,12 +15,7 @@
             <div class="logo"><img src="../../Public/image/logo.jpg" alt=""></div>
         </div>
         <?php require('search.php') ?>
-        <nav class="menu_icon visibility">
-            <a href="publication.php"><i class="fa-solid fa-house-chimney"></i></a>
-            <a href="publication_photo.php"><i class="fa-regular fa-image"></i></a>
-            <a href="publication_video.php"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#"> <i class="fa-solid fa-location-dot"></i></a>
-        </nav>
+        <?php require('nav.php') ?>
     </header>
 
 
@@ -107,6 +99,7 @@
     </section>
 
     <?php require('footer.php') ?>
+    <?php require_once('script_maps.php') ?>
 </body>
 
 </html>
