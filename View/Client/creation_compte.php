@@ -98,16 +98,14 @@
                         </div>
                     </div>
                 </div>
-                <div>
-                    <div class="row" hidden>
+                <div hidden>
+                    <div class="row">
                         <div class="col-sm-6">
-                            <input type="text" name="longitude" id="longitude" class="form-control" required
-                                readonly><br>
+                            <input type="text" name="longitude" id="longitude" class="form-control" required><br>
                         </div>
                         <div class="col-sm-6">
-                            <input type="text" name="latitude" id="latitude" class="form-control" required readonly>
+                            <input type="text" name="latitude" id="latitude" class="form-control" required>
                         </div>
-
                     </div><br>
                     <div id="map"
                         style="height: 400px;border-radius:10px;box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.267);z-index:1"

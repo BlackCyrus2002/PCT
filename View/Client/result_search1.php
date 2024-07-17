@@ -2,28 +2,10 @@
 require_once('php_model.php');
 if ($_SESSION['search']) {
     $searchs = $_SESSION['search'];
-    $long = $_SESSION['long'];
-    $lat = $_SESSION['lat'];
-    if ($long == null && $lat == null) {
-        header('Location: result_search1.php');
-        exit();
-    }
     $req_searchs = "SELECT ID,nom,commune,quartier,metier,prenom,telephone,longitude,latitude FROM artisans 
     WHERE metier LIKE '%$searchs%' OR ville LIKE '%$searchs%' OR commune LIKE '%$searchs%' OR quartier LIKE '%$searchs%'
     OR nom LIKE '%$searchs%' OR prenom  LIKE '%$searchs%'  ";
     $req_search = mysqli_query($con, $req_searchs);
-
-    //Calucle haversine
-    function haversine($latUser, $longUser, $latArt, $longArt)
-    {
-        $rayon_terre = 6371; //en killomètre
-        $dLat = deg2rad($latArt - $latUser); //degré latitude
-        $dLong = deg2rad($longArt - $longUser); //degré longitude
-
-        $a = sin($dLat / 2) * sin($dLat / 2) + cos(deg2rad($latUser)) * cos(deg2rad($latArt)) * sin($dLong / 2) * sin($dLong / 2);
-        $c = 2 * atan2(sqrt($a), sqrt(1 - $a));
-        return $rayon_terre * $c;
-    }
 } else {
     header('Location: publication.php');
     exit();
@@ -77,11 +59,7 @@ if ($_SESSION['search']) {
             <section class="container">
                 <div class="row">
                     <?php
-                    $artisans = [];
                     while ($fil = mysqli_fetch_array($req_search)) {
-                        $distance = haversine($lat, $long, $fil['latitude'], $fil['longitude']);
-                        $fil['distance'] = $distance;
-                        $artisans[] = $fil;
                     ?>
                     <div class="col-xl-3 col-md 6" style="margin-bottom: 20px;">
                         <a href="#" style="color: black;text-decoration:none">
@@ -136,22 +114,7 @@ if ($_SESSION['search']) {
                                             </h6>
                                         </div>
                                     </div>
-                                    <div style="display: flex;align-items:center">
-                                        <div style="margin-right: 5px;color:blue;">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                            </svg>
-                                        </div>
-                                        <div style="padding-top:10px">
-                                            <h6 style="font-family: Georgia, 'Times New Roman', Times, serif;">
-                                                <span style="font-weight:bold">
-                                                    <?php echo round($fil['distance'], 1) ?>
-                                                </span> Km de vous
-                                            </h6>
-                                        </div>
-                                    </div>
+
                                     <div>
                                         <a href="tel:+225<?php echo $fil['telephone'] ?>" class="btn btn-primary"
                                             style="box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.247);">
