@@ -17,12 +17,26 @@ if ($_SESSION['search']) {
     function haversine($latUser, $longUser, $latArt, $longArt)
     {
         $rayon_terre = 6371; //en killomètre
-        $dLat = deg2rad($latArt - $latUser); //degré latitude
-        $dLong = deg2rad($longArt - $longUser); //degré longitude
 
-        $a = sin($dLat / 2) * sin($dLat / 2) + cos(deg2rad($latUser)) * cos(deg2rad($latArt)) * sin($dLong / 2) * sin($dLong / 2);
+        //Convertissons les latitudes et les longitudes en dégré
+        $latitudeUser = deg2rad($latUser);
+        $latitudeArt = deg2rad($latArt);
+        $longitudeUser = deg2rad($longUser);
+        $longitudeArt = deg2rad($longArt);
+
+        //Calculons les différences
+        $delLat = $latitudeArt - $latitudeUser;
+        $delLong = $longitudeArt - $longitudeUser;
+
+        //Calculons la partie inférieure de la formule
+        $a = sin($delLat / 2) * sin($delLat / 2) + cos($latitudeArt) * cos($latitudeUser) * sin($delLong / 2) * sin($delLong / 2);
+
         $c = 2 * atan2(sqrt($a), sqrt(1 - $a));
-        return $rayon_terre * $c;
+
+        //Calculons la distance
+        $distance = $c * $rayon_terre;
+
+        return $distance;
     }
 } else {
     header('Location: publication.php');
@@ -83,7 +97,7 @@ if ($_SESSION['search']) {
                         $fil['distance'] = $distance;
                         $artisans[] = $fil;
                     ?>
-                    <div class="col-xl-3 col-md 6" style="margin-bottom: 20px;">
+                    <div class="col-xl-3 col-md-6" style="margin-bottom: 20px;">
                         <a href="#" style="color: black;text-decoration:none">
                             <div class="contact">
                                 <center>
