@@ -6,7 +6,7 @@
     <?php require('head.php') ?>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-    <title>Localisation d'artisan </title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-geosearch/dist/geosearch.css" />
 </head>
 
 <body>
@@ -50,12 +50,12 @@
     <?php require('footer.php') ?>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
+    <script src="https://unpkg.com/leaflet-geosearch/dist/geosearch.umd.js"></script>
     <script>
     function initMap() {
         var mapOptions = {
             zoom: 12,
-            center: [0, 0]
+            center: [8, 0]
         };
 
         var map = L.map('map').setView(mapOptions.center, mapOptions.zoom);
@@ -66,6 +66,8 @@
 
         //Ce tableau est encodé en JSON et intégré dans le script JavaScript.
         var positions = <?php echo json_encode($positions); ?>;
+        var markers = [];
+
         positions.forEach(function(pos) {
             //le contenu du popup (popup) est construit en concaténant le métier et le nom de la personne, séparés par une balise <br> pour un retour à la ligne.
             var popup = pos.metier + "<br>" + pos.personne;
@@ -75,6 +77,25 @@
                 .bindPopup(popup)
                 .openPopup();
         });
+
+        var markerLayer = L.layerGroup(markers).addTo(map);
+
+        // Ajouter la barre de recherche
+        const {
+            GeoSearchControl,
+            OpenStreetMapProvider
+        } = window.GeoSearch;
+        const provider = new OpenStreetMapProvider();
+
+        const searchControl = new GeoSearchControl({
+            provider: provider,
+            style: 'bar',
+            autoComplete: true,
+            autoCompleteDelay: 250,
+            searchLabel: 'Entrer le lieu',
+        });
+
+        map.addControl(searchControl);
 
     }
 

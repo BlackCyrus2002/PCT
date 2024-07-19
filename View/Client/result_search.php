@@ -18,7 +18,7 @@ if ($_SESSION['search']) {
     {
         $rayon_terre = 6371; //en killomètre
 
-        //Convertissons les latitudes et les longitudes en dégré
+        //Convertissons les latitudes et les longitudes en radian
         $latitudeUser = deg2rad($latUser);
         $latitudeArt = deg2rad($latArt);
         $longitudeUser = deg2rad($longUser);
@@ -38,6 +38,19 @@ if ($_SESSION['search']) {
 
         return $distance;
     }
+
+
+    $artisans = [];
+    while ($fil = mysqli_fetch_array($req_search)) {
+        $distance = haversine($lat, $long, $fil['latitude'], $fil['longitude']);
+        $fil['distance'] = $distance;
+        $artisans[] = $fil;
+    }
+
+    // Trions les artisans par distance
+    usort($artisans, function ($a, $b) {
+        return $a['distance'] <=> $b['distance'];
+    });
 } else {
     header('Location: publication.php');
     exit();
@@ -91,11 +104,9 @@ if ($_SESSION['search']) {
             <section class="container">
                 <div class="row">
                     <?php
-                    $artisans = [];
-                    while ($fil = mysqli_fetch_array($req_search)) {
-                        $distance = haversine($lat, $long, $fil['latitude'], $fil['longitude']);
-                        $fil['distance'] = $distance;
-                        $artisans[] = $fil;
+                    foreach ($artisans as  $fil) {
+
+
                     ?>
                     <div class="col-xl-3 col-md-6" style="margin-bottom: 20px;">
                         <a href="#" style="color: black;text-decoration:none">
@@ -184,7 +195,6 @@ if ($_SESSION['search']) {
 
                     </div>
                     <?php } ?>
-
                 </div>
 
             </section>
