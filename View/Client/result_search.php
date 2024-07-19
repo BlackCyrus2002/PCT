@@ -10,7 +10,7 @@ if ($_SESSION['search']) {
     }
     $req_searchs = "SELECT ID,nom,commune,quartier,metier,prenom,telephone,longitude,latitude FROM artisans 
     WHERE metier LIKE '%$searchs%' OR ville LIKE '%$searchs%' OR commune LIKE '%$searchs%' OR quartier LIKE '%$searchs%'
-    OR nom LIKE '%$searchs%' OR prenom  LIKE '%$searchs%'  ";
+    OR nom LIKE '%$searchs%' OR prenom  LIKE '%$searchs%' ";
     $req_search = mysqli_query($con, $req_searchs);
 
     //Calucle haversine
