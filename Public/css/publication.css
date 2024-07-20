@@ -295,7 +295,7 @@ header .recherche input {
   color: #ff7e00;
 }
 
-/* sous menu quand on clique sur partager*/
+/* sous menu quand on clique sur utilisateur*/
 
 .post .navbar {
   display: flex;
@@ -316,10 +316,6 @@ header .recherche input {
 
 .navbar .fa-brands.fa-whatsapp {
   color: green;
-}
-
-.navbar .fa-brands.fa-instagram {
-  color: rgb(74, 5, 80);
 }
 
 .navbar a {

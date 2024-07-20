@@ -85,24 +85,14 @@ document.querySelectorAll(".visibility").forEach(function (r) {
 
 /* quand on clique sur partager*/
 
-const partage = document.querySelector(".actions .fas.fa-share");
+const partage = document.querySelector(".fa-user");
 const navbar = document.querySelector(".post .navbar");
 const liker = document.querySelector(".post .actions .fa-thumbs-up");
+
 partage.addEventListener("click", function () {
   navbar.classList.toggle("active");
 });
 
 liker.addEventListener("click", function () {
   liker.classList.toggle("active");
-});
-
-const contacter_video = document.querySelector(".post .click-video");
-const contacter_photo = document.querySelector(".post .click-photo");
-
-contacter_video.addEventListener("click", function () {
-  window.location.href = "../html/demande_et_service.html";
-});
-
-contacter_photo.addEventListener("click", function () {
-  window.location.href = "../html/demande_et_service.html";
 });

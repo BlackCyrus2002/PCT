@@ -295,7 +295,7 @@
             <section class="container">
                 <div class="row">
                     <?php while ($fil = mysqli_fetch_array($user)) { ?>
-                    <div class="col-xl-3 col-md 6" style="margin-bottom: 20px;">
+                    <div class="col-xl-3 col-md-4" style="margin-bottom: 20px;">
                         <a href="#" style="color: black;text-decoration:none">
                             <div class="contact">
                                 <center>

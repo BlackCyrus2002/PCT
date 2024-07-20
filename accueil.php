@@ -1,3 +1,7 @@
+<?php require_once('App/Config/database.php') ?>
+<?php require_once('View/Client/error_message.php') ?>
+<?php require_once('App/Model/abonne_model.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,13 +13,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Julee&family=Tangerine:wght@400;700&display=swap"
         rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -37,10 +40,10 @@
         <div class="container2 apparaitre">
             <div class="text">
                 <div>
-                    <p>
-                        <dtrong>Bien</strong>venue
-                    </p>
-                    <p>sur le site de l'entreprise 44</p>
+                    <h2>
+                        <strong style="color: orangered;">Bien</strong>venue <br>
+                        sur "Mon Artisan"
+                    </h2>
                 </div>
             </div>
             <div class="photo1 apparaitre">
@@ -67,8 +70,10 @@
     <section>
         <!--section: pourquoi creer un compte-->
         <div class="pourquoi apparaitre" id="pourquoi">
-            <h1><span>Pourquoi!</span>creer un compte ?</h1>
-            <p>
+            <h2 style="font-size: 30px;"><span>Pourquoi!</span> Créer un compte ?</h2>
+            <br>
+
+            <p style="font-size: 20px;">
                 Occupant une place très importante dans l'économie ivoirienne,
                 employant 44% de la population active et constituant la moitié du PIB
                 nationale nous constatons que les acteurs du secteur informel doté
@@ -78,8 +83,9 @@
                 comment et quand les trouver et peine à entrer en contact avec ces
                 derniers plus rapidement et en toute simplicité.
             </p>
+            <br>
 
-            <p>
+            <p style="font-size: 20px;">
                 C'est de là qu'est venu l'idée de la création d'une plateforme qui
                 pourra aider ces artisans à mieux se faire connaître auprès des
                 populations à travers l'auto promotion de leur biens et services, et
@@ -111,8 +117,8 @@
             <img src="Public/image/pot_argile.jpg" alt="" />
             <div class="promotion">
                 <h3><span>Promo</span>tion</h3>
-                <p>
-                    Mon artisan est une plateforme dédiée à promouvoir les métiers
+                <p style="font-size: 20px;">
+                    'Mon artisan' est une plateforme dédiée à promouvoir les métiers
                     artisanaux de la côte d'ivoire voir l'auto promotion des biens et
                     services artisanaux produits par les artisans eux même.
                 </p>
@@ -122,8 +128,8 @@
         <!-- avantage et image-->
         <div class="float2 apparaitre" id="avantage">
             <div class="avantage">
-                <h3>Avantage</h3>
-                <p>
+                <h3>Avantages</h3>
+                <p style="font-size: 20px;">
                     La plateforme vous permet de bénéficier de nombreux avantages afin
                     de vous fournir un usage responsable et de qualité.
                 </p>
@@ -168,7 +174,7 @@
         </div>
 
         <!-- carousel image-->
-        <h1 id="galerie">galerie</h1>
+        <h1 id="galerie">Galérie</h1>
         <div class="carousel apparaitre">
             <div class="carousel-item active apparaitre" id="photo1">
                 <img src="Public/image/image_carousel1.jpg" alt="Image1" />
@@ -195,8 +201,8 @@
 
         <div class="creations services apparaitre">
             <div class="creation apparaitre">
-                <h4>creation</h4>
-                <p>
+                <h3 style="font-size: 30px;">Création</h3><br>
+                <p style="font-size: 20px;">
                     Exposition de vos différentes réalisations, œuvres artisanales,
                     moderne et traditionnelle.
                 </p>
@@ -205,8 +211,8 @@
             </div>
 
             <div class="service">
-                <h4>service</h4>
-                <p>
+                <h3 style="font-size: 30px;">Service</h3><br>
+                <p style="font-size: 20px;">
                     Rapidité, efficacité des services proposés et les différentes
                     intervention d'urgence par les artisans.
                 </p>
@@ -214,9 +220,9 @@
                 <img src="Public/image/femme.jpg" alt="" />
             </div>
             <div class="contact apparaitre">
-                <h4>contact</h4>
-                <p>
-                    contactez nous pour tout besoins ou aide vous pouvez nous retouvez
+                <h3 style="font-size: 30px;">Contact</h3><br>
+                <p style="font-size: 20px;">
+                    Contactez nous pour tout besoins ou aide vous pouvez nous retouvez
                     sur:........
                 </p>
             </div>
@@ -225,7 +231,7 @@
         <!--section des avis-->
 
         <div class="avis apparaitre" id="avis">
-            <h1>avis</h1>
+            <h1>Avis</h1>
         </div>
 
         <div class="commentaires">
@@ -280,10 +286,53 @@
             <li>ClOSSAIRE SEO Glop CI</li>
             <li>Droit d'utilisation</li>
         </ul>
-        <div class="email">
-            <input type="email" placeholder="email" />
-            <button>Envoyé</button>
-        </div>
+        <form action="" method="post">
+            <div class="email">
+                <input type="email" name="email_client" id="email_client" placeholder="email" />
+                <button name="abonne_send">Envoyé</button><br>
+                <div style="margin-top:5px">
+
+                    <?php
+                    if ($email_error) { ?>
+                    <script>
+                    Swal.fire({
+                        imageUrl: "Public/image/512.webp",
+                        title: "Oops...",
+                        text: "<?php echo $email_error ?>",
+                        imageWidth: 100,
+                        imageHeight: 100,
+                    });
+                    </script>
+                    <?php } ?>
+
+                    <?php
+                    if ($email_save) { ?>
+                    <script>
+                    Swal.fire({
+                        imageUrl: "Public/image/512 (3).webp",
+                        title: "Félicitation",
+                        text: "<?php echo $email_save ?>",
+                        imageWidth: 100,
+                        imageHeight: 100,
+                    });
+                    </script>
+                    <?php } ?>
+
+                    <?php
+                    if ($email_exist) { ?>
+                    <script>
+                    Swal.fire({
+                        imageUrl: "Public/image/512 (1).webp",
+                        title: "Déjà existant",
+                        text: "<?php echo $email_exist ?>",
+                        imageWidth: 100,
+                        imageHeight: 100,
+                    });
+                    </script>
+                    <?php } ?>
+                </div>
+            </div>
+        </form>
     </footer>
 
     <script src="Public/js/accueil.js"></script>

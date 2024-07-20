@@ -65,13 +65,11 @@
 
         <h3 style="font-family: 'Times New Roman', Times, serif;font-weight:bold">Métier</h3>
         <ul>
-            <?php while ($fil = mysqli_fetch_array($metier)) { ?>
-
             <li>
                 <a href="#">
                     <div style="display: flex;align-items:center;justify-content:space-between">
                         <div style="padding-left: 10px;">
-                            <?php echo $fil['metier'] ?>
+                            Coiffure
                         </div>
                         <div>
                             <i class="fa-solid fa-caret-down"></i>
@@ -80,8 +78,58 @@
 
                 </a>
             </li>
+            <li>
+                <a href="#">
+                    <div style="display: flex;align-items:center;justify-content:space-between">
+                        <div style="padding-left: 10px;">
+                            Couture
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                    </div>
 
-            <?php } ?>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div style="display: flex;align-items:center;justify-content:space-between">
+                        <div style="padding-left: 10px;">
+                            Menuiserie
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                    </div>
+
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div style="display: flex;align-items:center;justify-content:space-between">
+                        <div style="padding-left: 10px;">
+                            Mécanique
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                    </div>
+
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div style="display: flex;align-items:center;justify-content:space-between">
+                        <div style="padding-left: 10px;">
+                            Electronique (réparateur)
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                    </div>
+
+                </a>
+            </li>
         </ul>
 
         <div class="voir_plus">
