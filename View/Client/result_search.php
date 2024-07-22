@@ -97,7 +97,6 @@ if ($_SESSION['search']) {
         </section>
         <br>
         <div class="container">
-            <?php echo $long . ' ' . $lat ?>
 
             <h5 class="links-style">Voir tout</h5>
             <hr style="border-bottom: 2px solid grey;width:100px">
@@ -110,7 +109,8 @@ if ($_SESSION['search']) {
 
                     ?>
                     <div class="col-xl-3 col-md-6" style="margin-bottom: 20px;">
-                        <a href="#" style="color: black;text-decoration:none">
+                        <a href="profil_artisans.php?id_art=<?php echo $fil['ID'] ?>&& nom=<?php echo $fil['nom'] . ' ' . $fil['prenom'] ?>"
+                            style="color: black;text-decoration:none">
                             <div class="contact">
                                 <center>
                                     <img src="../../Public/image/user.png" alt="" class="art_photo">

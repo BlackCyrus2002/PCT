@@ -1,0 +1,96 @@
+sidebar{
+    overflow-y: visible;
+}
+
+body{
+    overflow-x: hidden;
+}
+.section-sidebar ul li{
+
+    text-align: left;
+}
+
+
+.section-sidebar ul li i{
+
+    width: 30px;
+}
+
+
+.section-sidebar ul li a{
+    padding-right: 50px;
+}
+
+.section_profil{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.section_profil .picture{
+    height: 80px;
+    width: 80px;
+    border-radius: 50px;
+    color: var(--colorfar);
+    margin-bottom: 10px;
+}
+
+ .section_profil .picture img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+}
+
+
+.section_profil a{
+    display: block;
+    border: solid 1px ;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    transition: 0.3s;
+    
+}
+
+.section_profil a:hover{
+    background-color:rgb(231, 227, 227);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 12px; 
+    
+}
+
+/* Style pour la partie roulante  de la scrollbar */
+::-webkit-scrollbar-thumb {
+    background-color: var(--colorfar2);
+    border-radius: 10px;
+   
+}
+
+/* Style pour le rail de la scrollbar */
+::-webkit-scrollbar-track {
+    background: lightgrey;
+    border-radius: 10px;
+}
+
+/* Style au survol */
+::-webkit-scrollbar-thumb:hover {
+    background: grey;
+}
