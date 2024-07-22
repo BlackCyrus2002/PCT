@@ -31,7 +31,7 @@ if ($_SESSION['search']) {
         //Calculons la partie inférieure de la formule
         $a = sin($delLat / 2) * sin($delLat / 2) + cos($latitudeArt) * cos($latitudeUser) * sin($delLong / 2) * sin($delLong / 2);
 
-        $c = 2 * atan2(sqrt($a), sqrt(1 - $a));
+        $c = 2 * asin(sqrt($a));
 
         //Calculons la distance
         $distance = $c * $rayon_terre;
@@ -97,6 +97,8 @@ if ($_SESSION['search']) {
         </section>
         <br>
         <div class="container">
+            <?php echo $long . ' ' . $lat ?>
+
             <h5 class="links-style">Voir tout</h5>
             <hr style="border-bottom: 2px solid grey;width:100px">
         </div>
@@ -105,7 +107,6 @@ if ($_SESSION['search']) {
                 <div class="row">
                     <?php
                     foreach ($artisans as  $fil) {
-
 
                     ?>
                     <div class="col-xl-3 col-md-6" style="margin-bottom: 20px;">

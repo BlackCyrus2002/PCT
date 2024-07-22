@@ -1,4 +1,15 @@
 <?php require_once('php_model.php') ?>
+<?php
+if ($_SESSION['art_job']) {
+    $art_job_search = $_SESSION['art_job'];
+    $search_arts = "SELECT ID,nom,gmail,longitude,latitude,metier,prenom,telephone,ville,quartier,commune FROM artisans WHERE metier LIKE '%$art_job_search%'";
+    $search_art = mysqli_query($con, $search_arts);
+}
+if (!$_SESSION['art_job']) {
+    header('Location: maps_artisan.php');
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,10 +44,10 @@
             <button type="submit" hidden name="art_search"></button>
         </form>
         <?php
-
         //Les positions des artisans sont collectées dans le tableau $positions
+
         $positions = [];
-        while ($fil = mysqli_fetch_array($user)) {
+        while ($fil = mysqli_fetch_array($search_art)) {
             $positions[] = [
                 'latitude' => $fil['latitude'],
                 'longitude' => $fil['longitude'],

@@ -8,3 +8,4 @@ require_once('../../App/Model/coif_metier.php');
 require_once('../../App/Model/cout_metier.php');
 require_once('../../App/Model/mec_metier.php');
 require_once('../../App/Model/search.php');
+require_once('../../App/Model/result_maps_art.php');
