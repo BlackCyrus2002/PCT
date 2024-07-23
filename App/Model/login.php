@@ -28,7 +28,7 @@ if (isset($_POST['login'])) {
                 setcookie("user_id", $id, time() + (3600), "/"); // 3600 = 1 heure
 
                 // Rediriger l'utilisateur vers la page d'accueil ou tableau de bord
-                header("Location: ../../View/Artisan/dashboard.php");
+                header("Location: ../../View/Artisan/tableau_de_bord.php");
                 exit();
             } else {
                 $error_message = "Email ou mot de passe incorrect.";
