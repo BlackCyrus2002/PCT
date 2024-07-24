@@ -2,7 +2,7 @@
     <div class="img-user">
 
         <div class="user">
-            <img src="<?php echo $only_art['path_photo'] ?>" alt="">
+            <img src="<?php echo $only_art['path_photo'] ?>" alt="" class="art_photo">
             <p><?php echo $only_art['nom'] . ' ' . $only_art['prenom'] ?></p>
             <P><?php echo $only_art['gmail'] ?></P>
         </div>

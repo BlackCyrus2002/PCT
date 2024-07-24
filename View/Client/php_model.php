@@ -9,3 +9,4 @@ require_once('../../App/Model/cout_metier.php');
 require_once('../../App/Model/mec_metier.php');
 require_once('../../App/Model/search.php');
 require_once('../../App/Model/result_maps_art.php');
+require_once('../../App/Model/art_picture.php');

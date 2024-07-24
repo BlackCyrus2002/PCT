@@ -10,7 +10,7 @@
         </div>
         <div style="display: flex;align-items:center">
             <div class="profil">
-                <img src="<?php echo $only_art['path_photo'] ?>" alt="user profil">
+                <img src="<?php echo $only_art['path_photo'] ?>" alt="user profil" class="art_photo">
                 <i class="fa-solid fa-caret-down"></i><br>
             </div>
             <div style="margin-left: 10px;">
@@ -31,7 +31,6 @@
             <li data-target="evolution"><i class="fa-solid fa-chart-line"></i><span>Evolution</span></li>
             <li data-target="geolocalisation"><i class="fa-solid fa-location-dot"></i><span>Localisation</span>
             </li>
-
             <li data-target="galerie"><i class="fa-regular fa-image"></i><span>Galeries</span></li>
             <li data-target="publicite"><i class="fa-solid fa-tv"></i><span>Publicités</span></li>
             <li data-target="parametre"><i class="fa-solid fa-gears"></i><span>Paramètres</span></li>

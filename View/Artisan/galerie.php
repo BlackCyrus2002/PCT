@@ -1,8 +1,10 @@
 <div id="galerie" class="menu" style="padding: 5%;">
     <div class="post photo">
         <div class="profile-info" style="display: flex;align-items:center">
-            <img src="<?php echo $only_art['path_photo'] ?>" alt="Profile Picture" style="height: 200px;width: 200px;border-radius:50%">
-            <h1>Ouedraogo Ibrahim</h1>
+            <img src="<?php echo $only_art['path_photo'] ?>" alt="Profile Picture" class="art_photo">
+            <h1>
+                <?php echo $only_art['nom'] . ' ' . $only_art['prenom'] ?>
+            </h1>
         </div><br>
         <hr>
         <h1>Poster une photo</h1><br>
@@ -31,5 +33,14 @@
 
             <button type="submit" name="post_pict">Poster</button>
         </form>
+        <br>
+        <hr>
+        <h1>Mes photos</h1><br>
+        <?php
+        $all_picture = "SELECT id_photo, comment, path_photo,id_artisan, publish_date FROM galerie_photo  WHERE id_artisan= " . $artisan . " ORDER BY publish_date";
+        $all_pictures = mysqli_query($con, $all_picture);
+        while ($image = $all_pictures->fetch_assoc()) { ?>
+        <img src="<?php echo $image['path_photo'] ?>" alt="" class="art_creation">
+        <?php } ?>
     </div>
 </div>

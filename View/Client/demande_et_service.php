@@ -24,6 +24,14 @@
         </div>
         <div class="container">
             <div class="row">
+                <div class="col-md-12" hidden>
+                    <div class="form-controle"><br>
+                        <label for="id_artisan">Entrez votre nom et prénom</label>
+                        <input type="text" name="id_artisan" class="form-control"
+                            value="<?php echo $_GET['id_artisan'] ?>">
+
+                    </div>
+                </div>
                 <div class="col-md-12">
                     <div class="form-controle"><br>
                         <label for="nom_prenom">Entrez votre nom et prénom</label>

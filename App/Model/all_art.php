@@ -1,3 +1,4 @@
 <?php
-$users = "SELECT ID,nom,gmail,longitude,latitude,metier,prenom,telephone,ville,quartier,commune FROM artisans";
+$users = "SELECT ID,nom,prenom,sexe,telephone,tel_wa,metier,deb_act,fin_act,longitude,
+            latitude,dur_act,jr_act,pays,ville,commune,quartier,gmail,path_photo FROM artisans";
 $user = mysqli_query($con, $users);
