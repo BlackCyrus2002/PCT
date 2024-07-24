@@ -30,31 +30,30 @@ if (!isset($_SESSION['user_id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
     <link rel="stylesheet" href="../../Public/css/artisan/tableau_de_bord.css">
     <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Tableau de bord</title>
     <style>
-    .art_creation {
-        height: 300px;
-        width: 250px;
-        border-radius: 10px;
-        box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.267);
-        margin-right: 10px;
-        margin-bottom: 10px;
-    }
+        .art_creation {
+            height: 300px;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.267);
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
 
-    .art_photo {
-        height: 200px;
-        width: 200px;
-        border-radius: 50%;
-        box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.219);
-    }
+        .art_photo {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.219);
+        }
     </style>
 </head>
 
@@ -90,39 +89,39 @@ if (!isset($_SESSION['user_id'])) {
     <script src="../../Public/js/artisan/intersection_observer.js"></script>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
-    function initMap() {
-        var mapOptions = {
-            zoom: 15,
-            center: [0, 0]
-        };
+        function initMap() {
+            var mapOptions = {
+                zoom: 15,
+                center: [0, 0]
+            };
 
-        var map = L.map('map').setView(mapOptions.center, mapOptions.zoom);
+            var map = L.map('map').setView(mapOptions.center, mapOptions.zoom);
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; 2024 Mon artisan'
-        }).addTo(map);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; 2024 Mon artisan'
+            }).addTo(map);
 
-        var latitude = <?php echo json_encode($only_art['latitude']); ?>;
-        var longitude = <?php echo json_encode($only_art['longitude']); ?>;
-        var art =
-            <?php echo json_encode($only_art['nom'] . ' ' . $only_art['prenom'] . '<br><center>' . $only_art['quartier'] . '</center>'); ?>;
-        var marker = L.marker([parseFloat(latitude), parseFloat(longitude)]).addTo(map)
-            .bindPopup(art)
-            .openPopup();
+            var latitude = <?php echo json_encode($only_art['latitude']); ?>;
+            var longitude = <?php echo json_encode($only_art['longitude']); ?>;
+            var art =
+                <?php echo json_encode($only_art['nom'] . ' ' . $only_art['prenom'] . '<br><center>' . $only_art['quartier'] . '</center>'); ?>;
+            var marker = L.marker([parseFloat(latitude), parseFloat(longitude)]).addTo(map)
+                .bindPopup(art)
+                .openPopup();
 
-    }
+        }
 
-    document.addEventListener('DOMContentLoaded', initMap);
+        document.addEventListener('DOMContentLoaded', initMap);
     </script>
     <script>
-    function previewImage(event) {
-        var reader = new FileReader();
-        reader.onload = function() {
-            var preview = document.getElementById("preview");
-            preview.src = reader.result;
-        };
-        reader.readAsDataURL(event.target.files[0]);
-    }
+        function previewImage(event) {
+            var reader = new FileReader();
+            reader.onload = function() {
+                var preview = document.getElementById("preview");
+                preview.src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
     </script>
 
 </body>

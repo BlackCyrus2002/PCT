@@ -25,7 +25,6 @@
         ?>
     </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
     const ctx = document.getElementById('myChart');
     const commandes = <?php echo json_encode($commandesData) ?>;
@@ -39,12 +38,16 @@
             datasets: [{
                     label: 'Commande',
                     data: commandes,
-                    borderWidth: 1
+                    borderWidth: 1,
+                    tension: 0.1,
+                    fill: false,
                 },
                 {
                     label: 'Service',
                     data: services,
-                    borderWidth: 1
+                    borderWidth: 1,
+                    tension: 0.1,
+                    fill: false,
                 }
             ]
         },
