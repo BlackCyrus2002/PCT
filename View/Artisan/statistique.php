@@ -6,13 +6,17 @@
         while ($picture_sum = $all_pictures_sums->fetch_assoc()) {
             $pict = $picture_sum['number_pict'];
         ?>
-
         <?php } ?>
         <div>
             <canvas id="stats" width="400" height="400" style="height:50%">
-
             </canvas>
-        </div>
+        </div><br>
+
+        <span style="font-weight: bold;font-size:18px">
+            Nombres de photo :
+            <?php echo $pict ?>
+        </span>
+
     </div>
 </div>
 <script>

@@ -26,7 +26,7 @@
 
         <ul class="button-container apparaitre">
             <i class="fa-solid fa-gauge"></i>
-            <li data-target="evenement"><i class="fa-solid fa-calendar-days"></i><span>Evénement</span></li>
+            <li data-target="evenement"><i class="fa-solid fa-calendar-days"></i><span>Evènement</span></li>
             <li data-target="statistique"><i class="fa-solid fa-chart-pie"></i><span>Statistique</span></li>
             <li data-target="evolution"><i class="fa-solid fa-chart-line"></i><span>Evolution</span></li>
             <li data-target="geolocalisation"><i class="fa-solid fa-location-dot"></i><span>Localisation</span>

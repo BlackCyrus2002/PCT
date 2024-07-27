@@ -75,7 +75,7 @@ if (isset($_GET['id_artisan'])) {
                     }
                 }
             } else {
-                echo "produit non trouvé.";
+                echo "";
             }
         } else {
             if (empty($_POST['nom'])) {

@@ -15,7 +15,20 @@
     transform: translateY(-10px);
   }
 }
+.img-absolute {
+  border-radius: 20px;
+  width: 60%;
+  height: 600px;
+  position: absolute;
+  left: 500px;
+  overflow-y: hidden;
+  filter: brightness(90%);
+}
 
+.img-absolute img {
+  width: 100%;
+  height: 100%;
+}
 .container-absolute {
   width: 62%;
   height: 600px;
