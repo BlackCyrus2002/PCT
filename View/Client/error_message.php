@@ -34,3 +34,5 @@ $fin_error = "";
 $add_event_success = "";
 $comment_error = "";
 $post_photo = "";
+$situation_error = "";
+$lieu_travail_error = "";

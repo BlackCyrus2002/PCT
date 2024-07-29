@@ -4,7 +4,7 @@ require_once '../../App/Config/database.php';
 if (!empty($_GET['id_art'])) {
     $id_art = $_GET['id_art'];
     $art = $con->prepare("SELECT ID,nom,prenom,sexe,telephone,tel_wa,metier,deb_act,fin_act,longitude,
-            latitude,dur_act,jr_act,pays,ville,commune,quartier,gmail,path_photo FROM artisans WHERE ID=?");
+            latitude,dur_act,jr_act,pays,ville,commune,quartier,gmail,path_photo,lieu_travail FROM artisans WHERE ID=?");
     $art->bind_param('i', $id_art);
     $art->execute();
     $result = $art->get_result();
@@ -17,7 +17,7 @@ if (!empty($_GET['id_art'])) {
     }
 }
 if (empty($_GET['id_art'])) {
-    header("Location: publication.php");
+    header("Location: tableau_de_bord.php");
     exit();
 }
 ?>
@@ -69,11 +69,16 @@ if (empty($_GET['id_art'])) {
                 <i class="fa-regular fa-star"></i>
             </div>
 
-            <div id="modifier">modifier le profile</div>
+            <a href="update_profile.php?id_art=<?php echo $only_art['ID'] ?>&& nom=<?php echo $only_art['nom'] . ' ' . $only_art['prenom'] ?>"
+                style="text-decoration: none;">
+                <div id="modifier">modifier le profile</div>
+            </a>
             <p class="calendrier">
                 <i class="fa-regular fa-calendar-days"></i>
                 <span>
-                    <?php echo $only_art['deb_act'] . 'H - ' . $only_art['fin_act'] . 'H' ?>
+                    <?php echo (new DateTime($only_art['deb_act']))->format('H') . 'H' . (new DateTime($only_art['deb_act']))->format('i'); ?>
+                    -
+                    <?php echo (new DateTime($only_art['fin_act']))->format('H') . 'H' . (new DateTime($only_art['fin_act']))->format('i'); ?>
                 </span>
             </p>
 
@@ -86,7 +91,7 @@ if (empty($_GET['id_art'])) {
             <div class="section-display ">
                 <div class="detail-item apparaitre">
                     <p class="gray">nom de l'entreprise</p>
-                    <p>la maison</p>
+                    <p><?php echo $only_art['lieu_travail'] ?></p>
                 </div>
 
                 <div class="detail-item apparaitre ">

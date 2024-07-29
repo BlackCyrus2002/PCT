@@ -84,14 +84,14 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <label for="deb_act">Début (H)</label>
-                            <input type="number" class="form-control" required name="deb_act" id="deb_act" />
+                            <input type="time" class="form-control" required name="deb_act" id="deb_act" />
                             <span style="color:red">
                                 <?php echo $deb_act_error ?>
                             </span><br>
                         </div>
                         <div class="col-sm-6">
                             <label for="fin_act">Fin (H)</label>
-                            <input type="number" class="form-control" required name="fin_act" id="fin_act">
+                            <input type="time" class="form-control" required name="fin_act" id="fin_act">
                             <span style="color:red">
                                 <?php echo $fin_act_error ?>
                             </span><br>

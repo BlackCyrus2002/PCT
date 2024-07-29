@@ -448,7 +448,7 @@ header .recherche input {
   border: none;
   box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.11);
   border-radius: 50%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   background-color: white;
 }
 .links-style {
@@ -476,8 +476,7 @@ header .recherche input {
 .div_scroll {
   display: inline-block;
   /* Styling */
-
-  width: 220px;
+  width: 250px;
   height: 100%;
   margin-right: 10px;
   border-radius: 10px;
