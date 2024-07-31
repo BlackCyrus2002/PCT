@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demande et servive</title>
     <link rel="stylesheet" href="../../Public/css/demande_et_service">
+    <link rel="shortcut icon" href="../../Public/image/mylogo.png" type="image/x-icon">
 </head>
 
 <body>

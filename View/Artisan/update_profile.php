@@ -32,6 +32,7 @@ require_once("../../App/Model/update_profil.php");
     <title>Modifier mes informations</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
+    <link rel="shortcut icon" href="../../Public/image/mylogo.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- Bootstrap CSS v5.2.1 -->

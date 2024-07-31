@@ -97,7 +97,10 @@ if ($_SESSION['search']) {
         </section>
         <br>
         <div class="container">
-
+            <?php
+            echo $long = $_SESSION['long'] . '  ';
+            echo  $lat = $_SESSION['lat'];
+            ?>
             <h5 class="links-style">Voir tout</h5>
             <hr style="border-bottom: 2px solid grey;width:100px">
         </div>
