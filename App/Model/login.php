@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('../../App/Config/database.php');
+require_once('../../../App/Config/database.php');
 
 if (isset($_POST['login'])) {
     if (!empty($_POST['gmail']) && !empty($_POST['password_user'])) {
@@ -22,13 +22,13 @@ if (isset($_POST['login'])) {
                 // Mot de passe correct, démarrage de la session
                 $_SESSION['user_id'] = $id;
                 $_SESSION['artisan_id'] = $artisan;
-
+                $_SESSION['email'] = $email;
 
                 // Définir des cookies pour se souvenir de l'utilisateur
                 setcookie("user_id", $id, time() + (3600), "/"); // 3600 = 1 heure
 
                 // Rediriger l'utilisateur vers la page d'accueil ou tableau de bord
-                header("Location: ../../View/Artisan/tableau_de_bord.php");
+                header("Location: ../../../View/Artisan/tableau_de_bord.php");
                 exit();
             } else {
                 $error_message = "Email ou mot de passe incorrect.";

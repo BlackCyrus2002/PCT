@@ -209,6 +209,7 @@
 
 .menu.active {
   display: block;
+  z-index: 4;
 }
 /*...............*/
 

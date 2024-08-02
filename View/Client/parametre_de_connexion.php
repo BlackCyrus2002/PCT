@@ -1,3 +1,4 @@
+<?php require_once('../../App/Config/database.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,21 +17,12 @@
         <h2>Paramètre de connexion </h2>
 
         <div class="form-controle">
-            <label for="email">Entrez votre email</label>
-            <input type="email" name="email" placeholder="example@gmail.com">
+            <label for="email">Email:</label>
+            <input type="email" name="email" placeholder="myemail@gmail.com"><br>
         </div>
-
-        <div class="form-controle">
-            <label for="password">Entrez votre mot de passe</label>
-            <input type="password" name="password" placeholder="***">
+        <div><br>
+            <button name="update_password">Envoyer</button>
         </div>
-        <div class="form-controle">
-            <label for="pass-confirm">Confirmer votre mot de passe</label>
-            <input type="password" name="password" placeholder="******">
-        </div>
-        <label for="checkbox"><input type="checkbox" name="checkbox">Enregistrer le mot de passe</label>
-
-        <button>Connexion</button>
     </form>
 
 

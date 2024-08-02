@@ -6,21 +6,21 @@
         </div>
         <div class="form-control">
             <label for="title">Titre</label>
-            <input type="text" name="title">
+            <input type="text" name="title" class="form-controle">
         </div>
         <span style="color:red">
             <?php echo $title_error ?>
         </span>
         <div class="form-control">
             <label for="lieu">Lieu</label>
-            <input type="text" name="lieu">
+            <input type="text" name="lieu" class="form-controle">
         </div>
         <span style="color:red">
             <?php echo $lieu_error ?>
         </span>
         <div class="form-control">
             <label for="checkboxInput">Jour entier</label>
-            <select name="jr_entier" id="jr_entier">
+            <select name="jr_entier" id="jr_entier" class="form-select">
                 <option value="">Veuillez selectionner</option>
                 <option value="Oui">Oui</option>
                 <option value="Non">Non</option>
@@ -31,21 +31,21 @@
         </span>
         <div class="form-control">
             <label for="date_event">Date</label>
-            <input type="date" name="date_event">
+            <input type="date" name="date_event" class="form-controle">
         </div>
         <span style="color:red">
             <?php echo $date_event_error ?>
         </span>
         <div class="form-control">
             <label for="deb">Début</label>
-            <input type="time" name="deb">
+            <input type="time" name="deb" class="form-controle" style="width: 25%;">
         </div>
         <span style="color:red">
             <?php echo $deb_error ?>
         </span>
         <div class="form-control">
             <label for="fin">Fin</label>
-            <input type="time" name="fin">
+            <input type="time" name="fin" class="form-controle" style="width: 25%;">
         </div>
         <span style="color:red">
             <?php echo $fin_error ?>

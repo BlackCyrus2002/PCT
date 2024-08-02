@@ -32,7 +32,7 @@
                 <li><a href="#avantage">avantage</a></li>
                 <li><a href="#avis">avis</a></li>
                 <li id="connexion">
-                    <a href="View/Client/connexion.php" class="login">Connexion</a>
+                    <a href="View/Client/connexion/connexion.php" class="login">Connexion</a>
                 </li>
             </ul>
         </nav>
