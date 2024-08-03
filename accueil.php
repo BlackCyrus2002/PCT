@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Julee&family=Tangerine:wght@400;700&display=swap"
         rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="shortcut icon" href="Public/image/mylogo.png" type="image/x-icon">
 </head>
 
 <body>

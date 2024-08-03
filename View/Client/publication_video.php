@@ -12,7 +12,7 @@
     <!--partie de l'entete-->
     <header>
         <div>
-            <div class="logo"><img src="../../Public/image//logo.jpg" alt=""></div>
+            <div class="logo"><img src="../../Public/image/mylogo.png" alt=""></div>
         </div>
         <?php require('search.php') ?>
         <?php require('nav.php') ?>

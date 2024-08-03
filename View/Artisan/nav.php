@@ -1,7 +1,7 @@
 <header>
     <div class="head apparaitre">
-        <div class="logo visibility">
-            <img src="../../Public/image/logo2.jpg" alt="logo">
+        <div class="logo visibility" style="overflow: hidden;">
+            <img src="../../Public/image/mylogo.png" alt="logo">
         </div>
         <div class="recherche"><i class="fa-solid fa-magnifying-glass"></i>
             <form action="">
