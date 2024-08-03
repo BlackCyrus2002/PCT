@@ -81,7 +81,6 @@ if (!isset($_SESSION['user_id']) && !isset($_SESSION['email'])) {
 
 <body>
     <?php require_once('nav.php') ?>
-
     <section>
 
         <div class="container-absolute apparaitre">

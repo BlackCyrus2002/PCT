@@ -36,3 +36,6 @@ $comment_error = "";
 $post_photo = "";
 $situation_error = "";
 $lieu_travail_error = "";
+$confirm_new_password = "";
+$different_password = "";
+$lien_expire = "";

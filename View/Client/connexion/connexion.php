@@ -24,7 +24,7 @@
                         <p>Creez votre compte
                             artisans gratuitement!!</p>
                         <div class="container">
-                            <a href="creation_compte.php">Creer un compte</a>
+                            <a href="../creation_compte.php">Creer un compte</a>
                         </div>
                     </div>
                     <div class="btn">
@@ -74,7 +74,7 @@
                                     Continuez avec google
                                 </a>
                             </div>
-                            <div id="pass_oubie"><a href="../parametre_de_connexion.php">Mot de passe oublié?</a></div>
+                            <div id="pass_oubie"><a href="../modif_password.php">Mot de passe oublié?</a></div>
                             <div id="connexion">
                                 <button name="login">Connexion</button>
 
