@@ -46,7 +46,7 @@ if (isset($_POST['update_password'])) {
 
                 // Contenu de l'email
                 $mail->isHTML(true);
-                $mail->Subject = 'Réinitialisation du mot de passe';
+                $mail->Subject = 'Reinitialisation du mot de passe';
                 $mail->Body    = $message;
                 $mail->AltBody = $message;
 

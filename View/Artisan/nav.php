@@ -1,6 +1,6 @@
 <header>
     <div class="head apparaitre">
-        <div class="logo visibility" style="overflow: hidden;">
+        <div class="logo visibility delete_logo" style="overflow: hidden;">
             <img src="../../Public/image/mylogo.png" alt="logo">
         </div>
         <div class="recherche"><i class="fa-solid fa-magnifying-glass"></i>

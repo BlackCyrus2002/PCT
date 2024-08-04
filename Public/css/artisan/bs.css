@@ -14,7 +14,8 @@
   -moz-appearance: none;
   appearance: none;
   background-color: #fff;
-  background-image: url("down-arrow.png"), var(--bs-form-select-bg-icon, none);
+  background-image: url("../../image/down-arrow.png"),
+    var(--bs-form-select-bg-icon, none);
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
   background-size: 16px 12px;

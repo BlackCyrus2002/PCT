@@ -1,9 +1,8 @@
 <div id="parametre" class="menu">
     <ul>
         <li>
-            <a
-                href="page_profile.php?id_art=<?php echo $only_art['ID'] ?>&& nom=<?php echo $only_art['nom'] . ' ' . $only_art['prenom'] ?>">
-                Modifier le profile
+            <a href="page_profile.php?id_art=<?php echo $only_art['ID'] ?>&& nom=<?php echo $only_art['nom'] . ' ' . $only_art['prenom'] ?>">
+                Mon profil
             </a>
             <i class="fa-solid fa-angle-right"></i>
         </li>

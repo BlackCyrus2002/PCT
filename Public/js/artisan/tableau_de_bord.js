@@ -76,12 +76,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ic on Appele la fonction pour chaque paire
+  // ici on Appele la fonction pour chaque paire
   setupToggle("parck-publicitaire", "click-parck");
   setupToggle("aide", "click-aide");
   setupToggle("confidentialite", "click-confidentialite");
   setupToggle("instruction", "click-instruction");
-  setupToggle("message", "click-message");
 
   //structure mobile//
 

@@ -687,6 +687,9 @@ p {
   .nav_icon {
     width: 200px;
   }
+  .delete_logo {
+    display: none;
+  }
 }
 
 @media (max-width: 904px) {
@@ -774,6 +777,9 @@ p {
   .container,
   .container-absolute {
     width: 50%;
+  }
+  .fa-magnifying-glass {
+    display: none;
   }
 }
 @media (max-width: 820px) {

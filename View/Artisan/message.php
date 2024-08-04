@@ -1,6 +1,12 @@
 <div id="message" class="menu ">
-    <h2>notification client</h2>
+    <h2>Mes messages</h2>
     <ul>
-        <li id="click-client-message">client <span>non lus</span></li>
+
+        <a href="#" style="display: block;text-decoration:none;color:black">
+            <li id="click-client-message">
+                <span style="font-weight: bold;">Demande de services</span> <span>non lus</span>
+
+            </li>
+        </a>
     </ul>
 </div>

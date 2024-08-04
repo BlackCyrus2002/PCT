@@ -5,7 +5,7 @@ require 'config.php';
 use GuzzleHttp\Client;
 
 $client = new Client([
-    'timeout'  => 2.0,
+    'timeout'  => 5.0,
     'verify' => __DIR__ . '/cacert.pem'
 ]);
 

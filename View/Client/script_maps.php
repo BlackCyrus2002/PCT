@@ -1,7 +1,7 @@
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
 <script>
-var map = L.map('maptest').setView([5.345317, -4.024429], 13); // Initial center
+var map = L.map('maptest').setView([5.434336, -3.986223], 13); // Initial center
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
