@@ -1,4 +1,4 @@
-<div id="evolution" class="menu">
+<div id="evolution" class="menu active ">
 
     <div class="evo-img">
         <div>

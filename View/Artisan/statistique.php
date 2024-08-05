@@ -1,4 +1,4 @@
-<div id="statistique" class="menu">
+<div id="statistique" class="menu ">
     <div class="stat-image">
         <?php
         $all_picture_sum = "SELECT id_photo, comment, path_photo,id_artisan, publish_date,COUNT(*) as number_pict FROM galerie_photo  WHERE id_artisan= " . $artisan . " ORDER BY publish_date";

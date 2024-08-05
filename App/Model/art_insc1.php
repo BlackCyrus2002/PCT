@@ -83,7 +83,7 @@ if (isset($_POST['inscrire'])) {
                     echo "Utilisateur non trouvé.";
                     exit();
                 }
-                header('Location: connexion.php');
+                header('Location: connexion/connexion.php');
                 exit();
             } else {
                 $error_message = "Erreur lors de l'enregistrement, réessayez svp!";

@@ -40,7 +40,7 @@
         $all_picture = "SELECT id_photo, comment, path_photo,id_artisan, publish_date FROM galerie_photo  WHERE id_artisan= " . $artisan . " ORDER BY publish_date";
         $all_pictures = mysqli_query($con, $all_picture);
         while ($image = $all_pictures->fetch_assoc()) { ?>
-            <img src="<?php echo $image['path_photo'] ?>" alt="" class="art_creation">
+        <img src="<?php echo $image['path_photo'] ?>" alt="" class="art_creation">
         <?php } ?>
     </div>
 </div>
