@@ -18,9 +18,10 @@
 .img-absolute {
   border-radius: 20px;
   width: 60%;
-  height: 600px;
+  height: 550px;
   position: absolute;
   left: 500px;
+  z-index: -1;
   overflow-y: hidden;
   filter: brightness(90%);
 }
@@ -32,6 +33,7 @@
 .container-absolute {
   width: 62%;
   height: 600px;
+  z-index: 1;
   position: absolute;
   left: 500px;
   overflow: hidden;
@@ -308,12 +310,13 @@
   width: 60%;
   height: 600px;
   position: absolute;
+  z-index: 1;
   left: 500px;
   overflow-y: auto;
 }
 
 #evenement {
-  height: 90%;
+  height: 100%;
   width: 100%;
   position: absolute;
   display: flex;
@@ -440,7 +443,6 @@
 
 #geolocalisation {
   position: absolute;
-  text-align: center;
   height: 100%;
   width: 100%;
   border-radius: 20px;
@@ -687,9 +689,6 @@ p {
   .nav_icon {
     width: 200px;
   }
-  .delete_logo {
-    display: none;
-  }
 }
 
 @media (max-width: 904px) {
@@ -726,7 +725,7 @@ p {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 700px;
+    height: 100%;
     position: absolute;
     justify-content: center;
     align-items: center;
@@ -737,7 +736,7 @@ p {
     width: 30%;
     height: 500px;
     position: absolute;
-    z-index: 8;
+    z-index: 10;
     clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
     margin-top: 40px;
     border-top-right-radius: 20px;
@@ -768,15 +767,21 @@ p {
 
 @media (max-width: 1024px) {
   .container,
-  .container-absolute {
+  .container-absolute,
+  .img-absolute {
     position: absolute;
     left: 400px;
   }
 }
 @media (max-width: 1255px) {
   .container,
-  .container-absolute {
+  .container-absolute,
+  .img-absolute {
     width: 50%;
+  }
+
+  .delete_logo {
+    display: none;
   }
   .fa-magnifying-glass {
     display: none;
@@ -784,21 +789,23 @@ p {
 }
 @media (max-width: 820px) {
   .container,
-  .container-absolute {
+  .container-absolute,
+  .img-absolute {
     left: 280px;
   }
 }
 
 @media (max-width: 640px) {
   .container,
-  .container-absolute {
+  .container-absolute,
+  .img-absolute {
     left: 50px;
     width: 80%;
   }
 
   .nav-bar {
     position: absolute;
-    z-index: 5;
+    z-index: 6;
     top: 300px;
     width: 200px;
     animation: none;
@@ -828,7 +835,8 @@ p {
 
 @media (max-width: 320px) {
   .container,
-  .container-absolute {
+  .container-absolute,
+  .img-absolute {
     width: 100%;
   }
 }

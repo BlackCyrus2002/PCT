@@ -48,7 +48,9 @@ if (!isset($_SESSION['user_id']) && !isset($_SESSION['email'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="../../Public/image/mylogo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
@@ -60,28 +62,27 @@ if (!isset($_SESSION['user_id']) && !isset($_SESSION['email'])) {
     <link rel="shortcut icon" href="../../Public/image/mylogo.png" type="image/x-icon">
     <title>Tableau de bord</title>
     <style>
-        .art_creation {
-            height: 300px;
-            width: 250px;
-            border-radius: 10px;
-            box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.267);
-            margin-right: 10px;
-            margin-bottom: 10px;
-        }
+    .art_creation {
+        height: 300px;
+        width: 250px;
+        border-radius: 10px;
+        box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.267);
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
 
-        .art_photo {
-            height: 200px;
-            width: 200px;
-            border-radius: 50%;
-            box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.219);
-        }
+    .art_photo {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.219);
+    }
     </style>
 </head>
 
 <body>
     <?php require_once('nav.php') ?>
     <section>
-
         <div class="container-absolute apparaitre">
             <?php require_once('help.php') ?>
             <?php require_once('instruction.php') ?>
@@ -91,16 +92,17 @@ if (!isset($_SESSION['user_id']) && !isset($_SESSION['email'])) {
 
         </div>
         <?php require_once('aside.php') ?>
+        <?php require_once('image_arriere_plan_interface.php') ?>
         <div class="container">
 
             <?php require_once('evenement.php') ?>
             <?php require_once('statistique.php') ?>
             <?php require_once('evolution.php') ?>
             <?php require_once('galerie.php') ?>
-            <?php require_once('publicite.php') ?>
+            <?php require_once('message.php') ?>
             <?php require_once('parametre.php') ?>
             <?php require_once('localisation.php') ?>
-            <?php require_once('message.php') ?>
+
 
         </div>
 
@@ -109,39 +111,39 @@ if (!isset($_SESSION['user_id']) && !isset($_SESSION['email'])) {
     <script src="../../Public/js/artisan/intersection_observer.js"></script>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
-        function initMap() {
-            var mapOptions = {
-                zoom: 15,
-                center: [0, 0]
-            };
+    function initMap() {
+        var mapOptions = {
+            zoom: 15,
+            center: [0, 0]
+        };
 
-            var map = L.map('map').setView(mapOptions.center, mapOptions.zoom);
+        var map = L.map('map').setView(mapOptions.center, mapOptions.zoom);
 
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; 2024 Mon artisan'
-            }).addTo(map);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; 2024 Mon artisan'
+        }).addTo(map);
 
-            var latitude = <?php echo json_encode($only_art['latitude']); ?>;
-            var longitude = <?php echo json_encode($only_art['longitude']); ?>;
-            var art =
-                <?php echo json_encode($only_art['nom'] . ' ' . $only_art['prenom'] . '<br><center>' . $only_art['quartier'] . '</center>'); ?>;
-            var marker = L.marker([parseFloat(latitude), parseFloat(longitude)]).addTo(map)
-                .bindPopup(art)
-                .openPopup();
+        var latitude = <?php echo json_encode($only_art['latitude']); ?>;
+        var longitude = <?php echo json_encode($only_art['longitude']); ?>;
+        var art =
+            <?php echo json_encode($only_art['nom'] . ' ' . $only_art['prenom'] . '<br><center>' . $only_art['quartier'] . '</center>'); ?>;
+        var marker = L.marker([parseFloat(latitude), parseFloat(longitude)]).addTo(map)
+            .bindPopup(art)
+            .openPopup();
 
-        }
+    }
 
-        document.addEventListener('DOMContentLoaded', initMap);
+    document.addEventListener('DOMContentLoaded', initMap);
     </script>
     <script>
-        function previewImage(event) {
-            var reader = new FileReader();
-            reader.onload = function() {
-                var preview = document.getElementById("preview");
-                preview.src = reader.result;
-            };
-            reader.readAsDataURL(event.target.files[0]);
-        }
+    function previewImage(event) {
+        var reader = new FileReader();
+        reader.onload = function() {
+            var preview = document.getElementById("preview");
+            preview.src = reader.result;
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    }
     </script>
 
 

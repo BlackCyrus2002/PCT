@@ -1,11 +1,13 @@
 <div id="parametre" class="menu">
     <ul>
-        <li>
-            <a href="page_profile.php?id_art=<?php echo $only_art['ID'] ?>&& nom=<?php echo $only_art['nom'] . ' ' . $only_art['prenom'] ?>">
+        <a href="page_profile.php?id_art=<?php echo $only_art['ID'] ?>&& nom=<?php echo $only_art['nom'] . ' ' . $only_art['prenom'] ?>"
+            style="text-decoration: none;color:black">
+            <li>
                 Mon profil
-            </a>
-            <i class="fa-solid fa-angle-right"></i>
-        </li>
+                <i class="fa-solid fa-angle-right"></i>
+            </li>
+        </a>
+
         <li>
             <a href="#">Changer le mot de passe</a>
             <i class="fa-solid fa-angle-right"></i>

@@ -32,13 +32,9 @@ document.addEventListener("DOMContentLoaded", function () {
     else if (liste_container2.contains(event.target)) {
       container_absolute.style.display = "block"; // Afficher la div de classe ccontainer_absolute
       container.style.display = "none";
-    } else {
-      container_absolute.style.display = "block";
-      container.style.display = "block";
     }
   });
 });
-
 document.addEventListener("DOMContentLoaded", function () {
   apparaitre(".button-container li", ".menu");
   apparaitre(".liste-container2 li", ".menu");
