@@ -30,6 +30,7 @@ require_once("../../App/Model/update_profil.php");
 
 <head>
     <title>Modifier mes informations</title>
+    <link rel="shortcut icon" href="../../Public/image/mylogo.png" type="image/x-icon">
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <link rel="shortcut icon" href="../../Public/image/mylogo.png" type="image/x-icon">

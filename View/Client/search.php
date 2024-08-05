@@ -14,8 +14,7 @@
 
                 </div><br>
                 <div id="maptest"
-                    style="height: 400px;border-radius:10px;box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.267);z-index:1"
-                    hidden>
+                    style="height: 400px;border-radius:10px;box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.267);z-index:1">
                 </div>
             </div>
             <div hidden>

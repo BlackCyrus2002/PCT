@@ -1,6 +1,7 @@
-<?php require_once('../../App/Config/database.php') ?>
-<?php require_once('error_message.php') ?>
-<?php require_once('../../App/Model/login.php') ?>
+<?php require_once('../../../App/Config/database.php') ?>
+<?php require_once('config.php'); ?>
+<?php require_once('../error_message.php') ?>
+<?php require_once('../../../App/Model/login.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,10 +9,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
+    <link rel="shortcut icon" href="../../../Public/image/mylogo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-    <link rel="stylesheet" href="../../Public/css/connexion.css">
-    <link rel="shortcut icon" href="../../Public/image/mylogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../../Public/css/connexion.css">
 </head>
 
 <body>
@@ -24,12 +25,13 @@
                         <p>Creez votre compte
                             artisans gratuitement!!</p>
                         <div class="container">
-                            <a href="creation_compte.php">Creer un compte</a>
+                            <a href="../creation_compte.php">Creer un compte</a>
                         </div>
                     </div>
                     <div class="btn">
                         <div class="devenez">
-                            <p>Devenez un artisans dès maintement et profitez de notre offre et aussi des avantage
+                            <p>
+                                Devenez un artisans dès maintement et profitez de notre offre et aussi des avantage
                                 que nous vous proposons
                             </p>
                         </div>
@@ -67,15 +69,18 @@
                             </div>
 
                             <div class="google"><br>
-                                <img src="../../Public/image/google-1088004_640.png" alt=""><a href="#">Continuez avec
-                                    google</a>
+                                <img src="../../../Public/image/google-1088004_640.png" alt="">
+                                <a
+                                    href="https://accounts.google.com/o/oauth2/v2/auth?scope=openid%20profile%20email&access_type=online&response_type=code&redirect_uri=<?php echo urlencode("http://localhost/PROJET%20PCT/View/Client/connexion/connect.php") ?>&client_id=<?php echo GOOGLE_ID ?>">
+                                    Continuez avec google
+                                </a>
                             </div>
-                            <div id="pass_oubie"><a href="#">Mot de passe oublié?</a></div>
+                            <div id="pass_oubie"><a href="../modif_password.php">Mot de passe oublié?</a></div>
                             <div id="connexion">
                                 <button name="login">Connexion</button>
 
                             </div>
-                            <a href="../../accueil.php" class="btn btn-default">Revenir à la page d'accueil</a>
+                            <a href="../../../accueil.php" class="btn btn-default">Revenir à la page d'accueil</a>
                         </form>
                     </div>
                 </div>

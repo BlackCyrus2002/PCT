@@ -5,7 +5,6 @@
     <div class="nav-bar apparaitre">
 
         <ul class="liste-container2">
-            <li data-target="message">Message</li>
             <li id="click-instruction">Instruction</li>
             <li id="click-parck"><i class="fa-solid fa-bullhorn"></i><span>Parck publicitaire</span></li>
             <li id="click-confidentialite">Confidentialité</li>

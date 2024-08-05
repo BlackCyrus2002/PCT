@@ -1,7 +1,7 @@
 <header>
     <div class="head apparaitre">
-        <div class="logo visibility">
-            <img src="../../Public/image/logo2.jpg" alt="logo">
+        <div class="logo visibility delete_logo" style="overflow: hidden;">
+            <img src="../../Public/image/mylogo.png" alt="logo">
         </div>
         <div class="recherche"><i class="fa-solid fa-magnifying-glass"></i>
             <form action="">
@@ -25,14 +25,13 @@
     <nav class="nav_icon apparaitre">
 
         <ul class="button-container apparaitre">
-            <i class="fa-solid fa-gauge"></i>
             <li data-target="evenement"><i class="fa-solid fa-calendar-days"></i><span>Evènement</span></li>
             <li data-target="statistique"><i class="fa-solid fa-chart-pie"></i><span>Statistique</span></li>
             <li data-target="evolution"><i class="fa-solid fa-chart-line"></i><span>Evolution</span></li>
             <li data-target="geolocalisation"><i class="fa-solid fa-location-dot"></i><span>Localisation</span>
             </li>
             <li data-target="galerie"><i class="fa-regular fa-image"></i><span>Galeries</span></li>
-            <li data-target="publicite"><i class="fa-solid fa-tv"></i><span>Publicités</span></li>
+            <li data-target="message"><i class="fa-brands fa-facebook-messenger"></i><span>Messages</span></li>
             <li data-target="parametre"><i class="fa-solid fa-gears"></i><span>Paramètres</span></li>
 
         </ul>
