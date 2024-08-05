@@ -31,7 +31,7 @@
             <li data-target="geolocalisation"><i class="fa-solid fa-location-dot"></i><span>Localisation</span>
             </li>
             <li data-target="galerie"><i class="fa-regular fa-image"></i><span>Galeries</span></li>
-            <li data-target="message"><i class="fa-brands fa-facebook-messenger"></i><span>Message</span></li>
+            <li data-target="message"><i class="fa-brands fa-facebook-messenger"></i><span>Messages</span></li>
             <li data-target="parametre"><i class="fa-solid fa-gears"></i><span>Paramètres</span></li>
 
         </ul>

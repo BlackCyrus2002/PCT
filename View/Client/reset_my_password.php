@@ -1,6 +1,9 @@
 <?php
 require_once('../../App/Config/database.php');
 require_once('error_message.php');
+if (!isset($_GET['$token'])) {
+    header('Location: modif_password.php');
+}
 require_once('../../App/Model/change_password.php');
 ?>
 <!DOCTYPE html>

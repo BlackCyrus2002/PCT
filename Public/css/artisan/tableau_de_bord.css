@@ -24,6 +24,8 @@
   z-index: -1;
   overflow-y: hidden;
   filter: brightness(90%);
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.247);
+  opacity: 0.8;
 }
 
 .img-absolute img {

@@ -1,305 +1,260 @@
-:root{
-    --colorfar:orangered;
-     --color2: white;
-     --colorgray: rgb(124, 122, 122);
-
-  }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+  --colorfar: orangered;
+  --color2: white;
+  --colorgray: rgb(124, 122, 122);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-
-.profile-card{
-
-    display: flex;
-    padding: 20px;
-    height: 250px;
-    justify-content: space-between;
-    position: absolute;
-    width: 80%;
-    top: 150px;
-    left: 10%;
-
-
+.profile-card {
+  display: flex;
+  padding: 20px;
+  height: 250px;
+  justify-content: space-between;
+  position: absolute;
+  width: 80%;
+  top: 150px;
+  left: 10%;
 }
 
-.profile-card .info-pers{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-   
+.profile-card .info-pers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.info-pers img{
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;
+.info-pers img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
 }
 
-.info-pers .detail-item.name{
-    font-weight: bold;
+.info-pers .detail-item.name {
+  font-weight: bold;
 }
-.profile-card .img-profile{
-    height: 100px;
-    width: 100px;
-    border-radius: 100px;
-}
-
-
-.icon{
-
-    display: flex;
-    flex-direction: column;
-    justify-content:space-around;
-    align-items: end;
-    width: 15%;
+.profile-card .img-profile {
+  height: 100px;
+  width: 100px;
+  border-radius: 100px;
 }
 
-
-
+.icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: end;
+  width: 15%;
+}
 
 .details {
-    display: flex;
-    align-items: flex-end; /* Correction : 'end' -> 'flex-end' */
-    height: 100vh;
- /* Ajout pour permettre au pseudo-élément de se positionner correctement */
-    overflow: hidden; /* Assure que l'élément pseudo ne dépasse pas les bordures */
+  display: flex;
+  align-items: flex-end; /* Correction : 'end' -> 'flex-end' */
+  height: 100vh;
+  /* Ajout pour permettre au pseudo-élément de se positionner correctement */
+  overflow: hidden; /* Assure que l'élément pseudo ne dépasse pas les bordures */
 }
 
 .details::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../../clients/image/image_carousel4.jpg');
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../../clients/image/image_carousel4.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
 }
 
-
-.information{
-height: 60%;
-width: 100%;
-display: flex;
-flex-direction: column;
-justify-content: end;
-align-items: center;
-background-color: rgb(235, 231, 231);
-padding-bottom: 30px;
-
+.information {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  background-color: rgb(235, 231, 231);
+  padding-bottom: 30px;
 }
 
 .section-display {
-width: 100%;
-height: 50%;
-display: flex;
-align-items: end;
-justify-content: space-around;
-
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: end;
+  justify-content: space-around;
 }
 
-.section-display .detail-item{
-    width: 17%;
-    border-radius: 10px;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border:  solid 1px var(--colorfar);
-
+.section-display .detail-item {
+  width: 17%;
+  border-radius: 10px;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px var(--colorfar);
 }
 
-
-.detail-item.metier{
-    border: solid 1px var(--colorfar);
-    margin-top: 10px;
-    padding: 5px;
-    border-radius: 20px;
-    color: var(--colorfar);
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.5s;
-    
+.detail-item.metier {
+  border: solid 1px var(--colorfar);
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 20px;
+  color: var(--colorfar);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
 }
-.detail-item.metier:hover{
-color: white;
-background-color: var(--colorfar);
+.detail-item.metier:hover {
+  color: white;
+  background-color: var(--colorfar);
 }
 
-#modifier{
-padding: 10px;
-border-radius: 20px;
-color: white;
-background-color: var(--colorfar);
-transition: 0.5s;
-cursor: pointer;
-width: auto;
+#modifier {
+  padding: 10px;
+  border-radius: 20px;
+  color: white;
+  background-color: var(--colorfar);
+  transition: 0.5s;
+  cursor: pointer;
+  width: auto;
 }
 
-#modifier:hover{
-color: var(--colorfar);
-background-color: white;
-
-
+#modifier:hover {
+  color: var(--colorfar);
+  background-color: white;
 }
 
- .detail-item.lieu{
+.detail-item.lieu {
   background-color: var(--colorfar);
   color: white;
   transition: 0.5s;
-cursor: pointer;
-transition: 0.5s;
-
- }
-
- .detail-item.lieu:hover{
-   transform: translateY(-10px);
-   background-color: white;
-   color: var(--colorfar);
- }
- .gray{
- color:var(--colorgray) ;
-
- }
-
- div,p::first-letter{
-    text-transform: capitalize;
- }
-
-
-
-.photo-couverture img{
-width: 100%;
-height: 100%;
-
+  cursor: pointer;
+  transition: 0.5s;
 }
 
-.icon-etoile .fa-regular{
-    cursor: pointer;
+.detail-item.lieu:hover {
+  transform: translateY(-10px);
+  background-color: white;
+  color: var(--colorfar);
+}
+.gray {
+  color: var(--colorgray);
 }
 
-.icon-etoile .fa-regular.active{
-    
-    background-color: yellow;
-    border-radius: 20px;
+div,
+p::first-letter {
+  text-transform: capitalize;
 }
 
-
-.icon .fa-solid.fa-camera{
-    font-size: 30px;
-    cursor: pointer;
-    transition: 0.5s;
+.photo-couverture img {
+  width: 100%;
+  height: 100%;
 }
 
-.apparaitre{
-    opacity:0;
-    transform:translateY(-30px) ;
-  }
-  
-  
-  
-  .apparaitre-visible{
-    opacity: 1;
-    transform: translateY(0);
-    transition:1s;
-  }
+.icon-etoile .fa-regular {
+  cursor: pointer;
+}
 
-@media (max-width:935px) {
-    
-.information{
+.icon-etoile .fa-regular.active {
+  background-color: yellow;
+  border-radius: 20px;
+}
+
+.icon .fa-solid.fa-camera {
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.5s;
+  color: white;
+}
+
+.apparaitre {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+.apparaitre-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 1s;
+}
+
+@media (max-width: 935px) {
+  .information {
     height: 80%;
-     padding-bottom: 0;
-}
+    padding-bottom: 0;
+  }
 
-.profile-card{
+  .profile-card {
     position: absolute;
     top: 40px;
     width: 70%;
     left: 150px;
-}
+  }
 
-.icon{
+  .icon {
     width: 40%;
-}
+  }
 
-.section-display{
+  .section-display {
     height: 65%;
     width: 50%;
     display: flex;
     flex-direction: column;
 
     align-items: center;
+  }
+
+  .section-display .detail-item {
+    height: 20%;
+    width: 100%;
+  }
 }
 
-.section-display .detail-item{
-   height: 20%;
- width: 100%;
+@media (max-width: 768px) {
+  .profile-card {
+    position: absolute;
+    top: 40px;
+    left: 100px;
+  }
 }
 
+@media (max-width: 546px) {
+  .profile-card {
+    position: absolute;
+    top: 40px;
+    width: 70%;
+    left: 0px;
+
+    width: 100%;
+  }
+
+  body {
+    margin: 0;
+  }
 }
 
+@media (max-width: 425px) {
+  .profile-card {
+    height: 200px;
+  }
 
-@media (max-width:768px) {
-  
-    .profile-card{
-        position: absolute;
-        top: 40px;
-        left: 100px;
-    }
+  .section-display {
+    width: 100%;
+  }
 
+  #modifier {
+    width: auto;
+    height: 30px;
+    font-size: 10px;
+    text-align: center;
+    vertical-align: center;
+  }
 }
-
-
-@media (max-width:546px) {
-    .profile-card{
-            position: absolute;
-            top: 40px;
-            width: 70%;
-            left: 0px;
-        
-        width: 100%;
-       
-    }
-
-    body{
-        margin: 0;
-    }
-}
-
-
-@media (max-width:425px) {
-    .profile-card{
-   height:200px ;
-
-    }
-
-    .section-display{
-        width: 100%;
-    }
-
-    #modifier{
-        width: auto;
-        height: 30px;
-        font-size: 10px;
-        text-align: center;
-        vertical-align: center;
-    }
-
-
-   
-
-}
-
-
-
-
-
-
