@@ -40,7 +40,7 @@ function addComment(button) {
     post.querySelector("#comment-email").value = "";
     post.querySelector("#comment-input").value = "";
   } else {
-    alert("Please fill in all fields");
+    alert("Remplisser les champs svp!");
   }
 }
 
@@ -81,18 +81,4 @@ const callback = function (entries, observer) {
 const observer = new IntersectionObserver(callback, options);
 document.querySelectorAll(".visibility").forEach(function (r) {
   observer.observe(r);
-});
-
-/* quand on clique sur partager*/
-
-const partage = document.querySelector(".fa-user");
-const navbar = document.querySelector(".post .navbar");
-const liker = document.querySelector(".post .actions .fa-thumbs-up");
-
-partage.addEventListener("click", function () {
-  navbar.classList.toggle("active");
-});
-
-liker.addEventListener("click", function () {
-  liker.classList.toggle("active");
 });
