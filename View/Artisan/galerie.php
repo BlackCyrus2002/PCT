@@ -22,16 +22,17 @@
             </div><br>
             <div>
                 <label for="path_photo">Photo</label><br>
-                <input type="file" name="path_photo" id="path_photo" accept="image/*" onchange="previewImage(event)">
+                <input type="file" name="path_photo" class="form-controle" id="path_photo" accept="image/*"
+                    onchange="previewImage(event)">
                 <span style="color:red">
                     <?php echo $post_photo ?>
                 </span>
             </div><br>
             <div><br>
-                <img id="preview" src="" alt="" style="width: 50%;" />
+                <img id="preview" src="" alt="" style="width: 200px;" />
             </div>
 
-            <button type="submit" name="post_pict">Poster</button>
+            <button type="submit" name="post_pict" class="post_photo">Poster</button>
         </form>
         <br>
         <hr>
@@ -40,7 +41,7 @@
         $all_picture = "SELECT id_photo, comment, path_photo,id_artisan, publish_date FROM galerie_photo  WHERE id_artisan= " . $artisan . " ORDER BY publish_date";
         $all_pictures = mysqli_query($con, $all_picture);
         while ($image = $all_pictures->fetch_assoc()) { ?>
-        <img src="<?php echo $image['path_photo'] ?>" alt="" class="art_creation">
+            <img src="<?php echo $image['path_photo'] ?>" alt="" class="art_creation">
         <?php } ?>
     </div>
 </div>
