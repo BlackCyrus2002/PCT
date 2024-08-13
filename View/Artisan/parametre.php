@@ -8,10 +8,14 @@
             </li>
         </a>
 
-        <li>
-            <a href="#">Changer le mot de passe</a>
-            <i class="fa-solid fa-angle-right"></i>
-        </li>
+
+        <a style="text-decoration: none;color:black"
+            href="new_password.php?id_art=<?php echo $only_art['ID'] ?>&& nom=<?php echo $only_art['nom'] . ' ' . $only_art['prenom'] ?>">
+            <li>
+                Changer le mot de passe
+                <i class="fa-solid fa-angle-right"></i>
+            </li>
+        </a>
         <li>
             <a href="#">Historique d'activité</a>
             <i class="fa-solid fa-angle-right"></i>

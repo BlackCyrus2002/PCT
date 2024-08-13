@@ -96,6 +96,7 @@
             autoComplete: true,
             autoCompleteDelay: 250,
             searchLabel: 'Entrer le lieu',
+
         });
 
         map.addControl(searchControl);
