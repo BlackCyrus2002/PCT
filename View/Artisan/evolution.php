@@ -1,4 +1,4 @@
-<div id="evolution" class="menu">
+<div id="evolution" class="menu active ">
 
     <div class="evo-img">
         <div>
@@ -26,37 +26,37 @@
     </div>
 </div>
 <script>
-const ctx = document.getElementById('myChart');
-const commandes = <?php echo json_encode($commandesData) ?>;
-const services = <?php echo json_encode($servicesData) ?>;
-new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre',
-            'Octobre', 'Novembre', 'Décembre'
-        ],
-        datasets: [{
-                label: 'Commande',
-                data: commandes,
-                borderWidth: 1,
-                tension: 0.1,
-                fill: false,
-            },
-            {
-                label: 'Service',
-                data: services,
-                borderWidth: 1,
-                tension: 0.1,
-                fill: false,
-            }
-        ]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
+    const ctx = document.getElementById('myChart');
+    const commandes = <?php echo json_encode($commandesData) ?>;
+    const services = <?php echo json_encode($servicesData) ?>;
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre',
+                'Octobre', 'Novembre', 'Décembre'
+            ],
+            datasets: [{
+                    label: 'Commande',
+                    data: commandes,
+                    borderWidth: 1,
+                    tension: 0.1,
+                    fill: false,
+                },
+                {
+                    label: 'Service',
+                    data: services,
+                    borderWidth: 1,
+                    tension: 0.1,
+                    fill: false,
+                }
+            ]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
             }
         }
-    }
-});
+    });
 </script>

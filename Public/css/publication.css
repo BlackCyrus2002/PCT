@@ -291,10 +291,6 @@ header .recherche input {
   color: #ff7e00;
 }
 
-.post .actions .fa-thumbs-up.active {
-  color: #ff7e00;
-}
-
 /* sous menu quand on clique sur utilisateur*/
 
 .post .navbar {

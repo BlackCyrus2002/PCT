@@ -56,14 +56,14 @@
     </form>
     <?php
     if ($add_event_success) { ?>
-        <script>
-            Swal.fire({
-                imageUrl: "../../Public/image/512 (3).webp",
-                title: "Félicitation",
-                text: "<?php echo $add_event_success ?>",
-                imageWidth: 100,
-                imageHeight: 100,
-            });
-        </script>
+    <script>
+    Swal.fire({
+        imageUrl: "../../Public/image/512 (3).webp",
+        title: "Félicitation",
+        text: "<?php echo $add_event_success ?>",
+        imageWidth: 100,
+        imageHeight: 100,
+    });
+    </script>
     <?php } ?>
 </div>

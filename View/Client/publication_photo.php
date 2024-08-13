@@ -1,4 +1,7 @@
-<?php require_once('php_model.php'); ?>
+<?php require_once('php_model.php');
+require_once('../../App/Model/art_picture.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +14,7 @@
     <!-- Partie de l'entête -->
     <header>
         <div>
-            <div class="logo"><img src="../../Public/image/mylogo.png" alt=""></div>
+            <div class="logo"><img src="../../Public/image/new_logo.jpg" alt=""></div>
         </div>
         <?php require('search.php'); ?>
         <?php require('nav.php'); ?>
@@ -24,16 +27,12 @@
     </section>
 
     <section class="multimedia visibility">
-        <?php
-        while ($picture = $all_pictures->fetch_assoc()) {
-
-            //On récupère l'artisan ayant l'ID "$picture['id_artisan']"
+        <?php while ($picture = $all_pictures->fetch_assoc()) {
             $users = "SELECT ID, nom, prenom, path_photo, tel_wa, telephone FROM artisans WHERE ID = " . $picture['id_artisan'];
             $user = mysqli_query($con, $users);
 
-            //On traite les informations de l'artisan grâce à la boucle while
             while ($artisan = $user->fetch_assoc()) { ?>
-        <div class="post photo">
+        <div class="post photo" data-photo-id="<?php echo $picture['id_photo']; ?>">
             <div class="profile-info">
                 <img src="<?php echo $artisan['path_photo']; ?>" alt="Profile Picture">
                 <div>
@@ -59,7 +58,9 @@
                 <img src="<?php echo $picture['path_photo']; ?>" alt="" style="height: 100%;">
             </div>
             <div class="actions">
-                <i class="fas fa-thumbs-up"></i>
+                <div class="good" data-photo-id="<?php echo $picture['id_photo']; ?>">
+                    <i class="fas fa-thumbs-up"></i>
+                </div>
                 <i class="fas fa-comment"></i>
                 <i class="fas fa-user"></i>
             </div>
@@ -73,7 +74,7 @@
                         id="instagram"></i></a>
             </div>
             <div><br>
-                <a href="demande_et_service.php?id_artisan=<?php echo $artisan['ID']; ?>&&id_photo=<?php echo $picture['id_photo']; ?>"
+                <a href="demande_et_service.php?id_artisan=<?php echo $artisan['ID']; ?>&id_photo=<?php echo $picture['id_photo']; ?>"
                     style="text-decoration: none;" class="click-photo">Contacter</a>
             </div>
             <form action="" method="post">
@@ -88,14 +89,39 @@
                 </div>
             </form>
         </div>
-
-        <?php }
+        <?php
+            }
         }
         ?>
     </section>
 
+    <style>
+    .post .actions .fa-thumbs-up.active {
+        color: #ff7e00;
+    }
+    </style>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.fa-user').forEach(function(partage) {
+            partage.addEventListener('click', function() {
+                let post = this.closest('.post');
+                let navbar = post.querySelector('.navbar');
+                navbar.classList.toggle('active');
+            });
+        });
+
+        document.querySelectorAll('.fa-thumbs-up').forEach(function(liker) {
+            liker.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        });
+    });
+    </script>
+
     <?php require('footer.php'); ?>
     <?php require_once('script_maps.php'); ?>
+
 </body>
 
 </html>

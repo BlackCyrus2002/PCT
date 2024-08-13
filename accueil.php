@@ -24,6 +24,9 @@
 
 <body>
     <header>
+        <div class="logo">
+            <img src="public/image/new_logo.jpg" alt=" logo">
+        </div>
         <!--menu d'ouverture et de fermeture pour mobile-->
         <i class="fa-solid fa-bars" id="ouvrir_menu"></i>
         <nav class="container apparaitre">

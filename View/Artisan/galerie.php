@@ -22,16 +22,17 @@
             </div><br>
             <div>
                 <label for="path_photo">Photo</label><br>
-                <input type="file" name="path_photo" id="path_photo" accept="image/*" onchange="previewImage(event)">
+                <input type="file" name="path_photo" class="form-controle" id="path_photo" accept="image/*"
+                    onchange="previewImage(event)">
                 <span style="color:red">
                     <?php echo $post_photo ?>
                 </span>
             </div><br>
             <div><br>
-                <img id="preview" src="" alt="" style="width: 50%;" />
+                <img id="preview" src="" alt="" style="width: 200px;" />
             </div>
 
-            <button type="submit" name="post_pict">Poster</button>
+            <button type="submit" name="post_pict" class="post_photo">Poster</button>
         </form>
         <br>
         <hr>

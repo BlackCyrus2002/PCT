@@ -20,7 +20,7 @@
 
                 <img src="../../Public/image/stars.png" alt="">
             </div>
-            <label for="vip">V.i.p <input type="checkbox" name="" id=""></label>
+            <label for="vip">V.I.P <input type="checkbox" name="" id=""></label>
         </div>
     </div>
 

@@ -1,11 +1,21 @@
 <header>
     <div class="head apparaitre">
         <div class="logo visibility delete_logo" style="overflow: hidden;">
-            <img src="../../Public/image/mylogo.png" alt="logo">
+            <img src="../../Public/image/new_logo.jpg" alt="logo">
         </div>
-        <div class="recherche"><i class="fa-solid fa-magnifying-glass"></i>
+        <div class="recherche">
+
             <form action="">
-                <input type="search" placeholder="Que recherchez-vous?">
+                <div class="div_recherche">
+                    <div style="padding: 10px;">
+                        <label for="my_search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </label>
+                    </div>
+                    <div style="width: 100%;">
+                        <input type="search" id="my_search" placeholder="Que recherchez-vous?">
+                    </div>
+                </div>
             </form>
         </div>
         <div style="display: flex;align-items:center">

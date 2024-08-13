@@ -1,9 +1,6 @@
 <?php
 require_once('../../App/Config/database.php');
 require_once('error_message.php');
-if (!isset($_GET['$token'])) {
-    header('Location: modif_password.php');
-}
 require_once('../../App/Model/change_password.php');
 ?>
 <!DOCTYPE html>
@@ -23,7 +20,7 @@ require_once('../../App/Model/change_password.php');
 
         <h2>Réinitialiser le mot de passe </h2>
 
-        <div class="form-controle">
+        <div class="form-controle" hidden>
             <label for="email">Nouveau mot de passe:</label>
             <input type="text" name="token" value="<?php echo $_GET['token'] ?>">
         </div><br>
