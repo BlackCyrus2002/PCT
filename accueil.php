@@ -65,7 +65,7 @@
                 </a>
             </button>
             <button id="connexion-mobile">
-                <a href="View/Client/connexion.php" style="text-decoration: none;display:block">Connexion</a>
+                <a href="View/Client/connexion/connexion.php" style="text-decoration: none;display:block">Connexion</a>
             </button>
         </div>
     </header>

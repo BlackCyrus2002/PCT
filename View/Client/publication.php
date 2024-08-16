@@ -51,7 +51,13 @@
                             style="color: black;text-decoration:none">
                             <div class="div_scroll" target="_blank">
                                 <center>
+                                    <?php if ($fil['sexe'] == 'H') { ?>
                                     <img src="../../Public/image/user.png" alt="" class="art_photo">
+                                    <?php } ?>
+                                    <?php if ($fil['sexe'] == 'F') { ?>
+                                    <img src="../../Public/image/female.png" alt="" class="art_photo">
+                                    <?php } ?>
+
                                     <h5 style="font-family: Georgia, 'Times New Roman', Times, serif;font-weight:bold">
                                         <?php
                                             $nom = $fil['nom'] . ' ' . $fil['prenom'];
@@ -81,7 +87,20 @@
                                         <div style="padding-top:5px">
                                             <h6
                                                 style="font-family: Georgia, 'Times New Roman', Times, serif;font-weight:bold">
-                                                <?php echo $fil['metier'] ?>
+                                                <?php
+                                                    $metier_art = $fil['metier'];
+                                                    // Texte d'exemple avec des caractères spéciaux
+                                                    $post_met = $metier_art;
+
+                                                    // Utilisation d'une expression régulière pour diviser la chaîne en mots
+                                                    preg_match_all('/[\p{L}\p{M}\d\.,;-?_:\'-]+/u', $post_met, $matches);
+
+                                                    // Sélectionne les 3 premiers mots et les réassemble
+                                                    $met_art = implode(' ', array_slice($matches[0], 0, 3));
+
+                                                    // Affiche les 3 premiers mots
+                                                    echo $met_art;
+                                                    ?>
                                             </h6>
                                         </div>
                                     </div>
@@ -135,7 +154,13 @@
                             style="color: black;text-decoration:none">
                             <div class="div_scroll" target="_blank">
                                 <center>
+                                    <?php if ($fil['sexe'] == 'H') { ?>
                                     <img src="../../Public/image/user.png" alt="" class="art_photo">
+                                    <?php } ?>
+                                    <?php if ($fil['sexe'] == 'F') { ?>
+                                    <img src="../../Public/image/female.png" alt="" class="art_photo">
+                                    <?php } ?>
+
                                     <h5 style="font-family: Georgia, 'Times New Roman', Times, serif;font-weight:bold">
                                         <?php
                                             $nom = $fil['nom'] . ' ' . $fil['prenom'];
@@ -165,7 +190,20 @@
                                         <div style="padding-top:10px">
                                             <h6
                                                 style="font-family: Georgia, 'Times New Roman', Times, serif;font-weight:bold">
-                                                <?php echo $fil['metier'] ?>
+                                                <?php
+                                                    $metier_art = $fil['metier'];
+                                                    // Texte d'exemple avec des caractères spéciaux
+                                                    $post_met = $metier_art;
+
+                                                    // Utilisation d'une expression régulière pour diviser la chaîne en mots
+                                                    preg_match_all('/[\p{L}\p{M}\d\.,;-?_:\'-]+/u', $post_met, $matches);
+
+                                                    // Sélectionne les 3 premiers mots et les réassemble
+                                                    $met_art = implode(' ', array_slice($matches[0], 0, 3));
+
+                                                    // Affiche les 3 premiers mots
+                                                    echo $met_art;
+                                                    ?>
                                             </h6>
                                         </div>
                                     </div>
@@ -219,7 +257,13 @@
                             style="color: black;text-decoration:none">
                             <div class="div_scroll" target="_blank">
                                 <center>
+                                    <?php if ($fil['sexe'] == 'H') { ?>
                                     <img src="../../Public/image/user.png" alt="" class="art_photo">
+                                    <?php } ?>
+                                    <?php if ($fil['sexe'] == 'F') { ?>
+                                    <img src="../../Public/image/female.png" alt="" class="art_photo">
+                                    <?php } ?>
+
                                     <h5 style="font-family: Georgia, 'Times New Roman', Times, serif;font-weight:bold">
                                         <?php
                                             $nom = $fil['nom'] . ' ' . $fil['prenom'];
@@ -249,7 +293,20 @@
                                         <div style="padding-top:10px">
                                             <h6
                                                 style="font-family: Georgia, 'Times New Roman', Times, serif;font-weight:bold">
-                                                <?php echo $fil['metier'] ?>
+                                                <?php
+                                                    $metier_art = $fil['metier'];
+                                                    // Texte d'exemple avec des caractères spéciaux
+                                                    $post_met = $metier_art;
+
+                                                    // Utilisation d'une expression régulière pour diviser la chaîne en mots
+                                                    preg_match_all('/[\p{L}\p{M}\d\.,;-?_:\'-]+/u', $post_met, $matches);
+
+                                                    // Sélectionne les 3 premiers mots et les réassemble
+                                                    $met_art = implode(' ', array_slice($matches[0], 0, 3));
+
+                                                    // Affiche les 3 premiers mots
+                                                    echo $met_art;
+                                                    ?>
                                             </h6>
                                         </div>
                                     </div>
@@ -303,7 +360,13 @@
                             style="color: black;text-decoration:none">
                             <div class="contact">
                                 <center>
+                                    <?php if ($fil['sexe'] == 'H') { ?>
                                     <img src="../../Public/image/user.png" alt="" class="art_photo">
+                                    <?php } ?>
+                                    <?php if ($fil['sexe'] == 'F') { ?>
+                                    <img src="../../Public/image/female.png" alt="" class="art_photo">
+                                    <?php } ?>
+
                                     <h5 style="font-family: Georgia, 'Times New Roman', Times, serif;font-weight:bold">
                                         <?php
                                             $nom = $fil['nom'] . ' ' . $fil['prenom'];
@@ -333,7 +396,20 @@
                                         <div style="padding-top:10px">
                                             <h6
                                                 style="font-family: Georgia, 'Times New Roman', Times, serif;font-weight:bold">
-                                                <?php echo $fil['metier'] ?>
+                                                <?php
+                                                    $metier_art = $fil['metier'];
+                                                    // Texte d'exemple avec des caractères spéciaux
+                                                    $post_met = $metier_art;
+
+                                                    // Utilisation d'une expression régulière pour diviser la chaîne en mots
+                                                    preg_match_all('/[\p{L}\p{M}\d\.,;-?_:\'-]+/u', $post_met, $matches);
+
+                                                    // Sélectionne les 3 premiers mots et les réassemble
+                                                    $met_art = implode(' ', array_slice($matches[0], 0, 3));
+
+                                                    // Affiche les 3 premiers mots
+                                                    echo $met_art;
+                                                    ?>
                                             </h6>
                                         </div>
                                     </div>

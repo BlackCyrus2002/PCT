@@ -5,11 +5,9 @@
 
 * {
   font-family: sans-serif;
-  font-weight: bold;
 }
 
 body {
-  text-align: center;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -45,7 +43,7 @@ form {
   text-align: left;
   background-color: rgb(206, 201, 201);
   border-radius: 20px;
-  animation: cisailler infinite 5s;
+  /*animation: cisailler infinite 5s;*/
   box-shadow: 0px 0px 60px #2f5a70;
   -webkit-box-reflect: below 2px
     linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));

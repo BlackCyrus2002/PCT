@@ -8,7 +8,24 @@ if ($_SESSION['search']) {
         header('Location: result_search1.php');
         exit();
     }
-    $req_searchs = "SELECT ID,nom,commune,quartier,metier,prenom,telephone,longitude,latitude FROM artisans 
+
+    /*
+    $current_page = (int)($_GET['page'] ?? 1);
+    if ($current_page <= 0) {
+        throw new Exception("Numéro de page invalide", 1);
+    }
+    $count = (int) $con->query("SELECT COUNT(ID) FROM artisans WHERE metier LIKE '%$searchs%' OR ville LIKE '%$searchs%' OR commune LIKE '%$searchs%' OR quartier LIKE '%$searchs%'
+    OR nom LIKE '%$searchs%' OR prenom  LIKE '%$searchs%' ")->fetch_column();
+    $num_art = 20;
+    $pages = ceil($count / $num_art);
+    if ($current_page > $pages) {
+        header('Location: publication');
+    }
+    $offset = $num_art * ($current_page - 1);
+    // ajouter LIMIT $num_art OFFSET $offset pour la pagination
+    */
+
+    $req_searchs = "SELECT ID,nom,commune,quartier,metier,prenom,telephone,longitude,latitude,sexe FROM artisans 
     WHERE metier LIKE '%$searchs%' OR ville LIKE '%$searchs%' OR commune LIKE '%$searchs%' OR quartier LIKE '%$searchs%'
     OR nom LIKE '%$searchs%' OR prenom  LIKE '%$searchs%' ";
     $req_search = mysqli_query($con, $req_searchs);
@@ -112,7 +129,13 @@ if ($_SESSION['search']) {
                             style="color: black;text-decoration:none">
                             <div class="contact">
                                 <center>
+                                    <?php if ($fil['sexe'] == 'H') { ?>
                                     <img src="../../Public/image/user.png" alt="" class="art_photo">
+                                    <?php } ?>
+                                    <?php if ($fil['sexe'] == 'F') { ?>
+                                    <img src="../../Public/image/female.png" alt="" class="art_photo">
+                                    <?php } ?>
+
                                     <h5 style="font-family: Georgia, 'Times New Roman', Times, serif;font-weight:bold">
                                         <?php
                                             $nom = $fil['nom'] . ' ' . $fil['prenom'];
@@ -142,7 +165,20 @@ if ($_SESSION['search']) {
                                         <div style="padding-top:10px">
                                             <h6
                                                 style="font-family: Georgia, 'Times New Roman', Times, serif;font-weight:bold">
-                                                <?php echo $fil['metier'] ?>
+                                                <?php
+                                                    $metier_art = $fil['metier'];
+                                                    // Texte d'exemple avec des caractères spéciaux
+                                                    $post_met = $metier_art;
+
+                                                    // Utilisation d'une expression régulière pour diviser la chaîne en mots
+                                                    preg_match_all('/[\p{L}\p{M}\d\.,;-?_:\'-]+/u', $post_met, $matches);
+
+                                                    // Sélectionne les 3 premiers mots et les réassemble
+                                                    $met_art = implode(' ', array_slice($matches[0], 0, 3));
+
+                                                    // Affiche les 3 premiers mots
+                                                    echo $met_art;
+                                                    ?>
                                             </h6>
                                         </div>
                                     </div>
@@ -196,7 +232,35 @@ if ($_SESSION['search']) {
                     </div>
                     <?php } ?>
                 </div>
+                <!--  <div class="d-flex justify-content-between my-4">
+                    <?php // if ($current_page > 1): 
+                    ?>
+                    <a href="?page=<?php // echo $current_page - 1; 
+                                    ?>" class="btn btn-outline-primary">Précédent</a>
+                    <?php // endif; 
+                    ?>
 
+                    <?php // for ($i = 1; $i <= $pages; $i++): 
+                    ?>
+                    <a href="?page=<?php // echo $i; 
+                                    ?>"
+                        <?php // if ($i == $current_page) echo 'class="active btn btn-primary"'; 
+                        ?>
+                        style="text-decoration: none;">
+                        <?php // echo $i; 
+                        ?>
+                    </a>
+                    <?php // endfor; 
+                    ?>
+
+                    <?php // if ($current_page < $pages): 
+                    ?>
+                    <a href="?page=<?php // echo $current_page + 1; 
+                                    ?> " class="btn btn-outline-primary">Suivant</a>
+                    <?php // endif; 
+                    ?>
+
+                </div> -->
             </section>
         </div>
         <?php require('footer.php') ?>
