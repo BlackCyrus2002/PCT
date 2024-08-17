@@ -90,12 +90,24 @@
         } = window.GeoSearch;
         const provider = new OpenStreetMapProvider();
 
+        const customMarkerIcon = L.icon({
+            iconUrl: 'https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png', // Remplacez par l'URL de votre icône
+            iconSize: [45, 45], // Taille de l'icône
+            iconAnchor: [12, 41], // Point d'ancrage de l'icône
+            popupAnchor: [1, -34], // Point d'ancrage de la popup
+            shadowSize: [41, 41] // Taille de l'ombre
+        });
+
         const searchControl = new GeoSearchControl({
             provider: provider,
             style: 'bar',
             autoComplete: true,
             autoCompleteDelay: 250,
             searchLabel: 'Entrer le lieu',
+            marker: {
+                icon: customMarkerIcon, // Utiliser l'icône personnalisée
+                draggable: false, // Si vous voulez que le marqueur soit déplaçable
+            }
 
         });
 

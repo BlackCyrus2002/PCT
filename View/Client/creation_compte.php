@@ -324,7 +324,7 @@
                         </div>
                     </div>
                 </div>
-                <div hidden>
+                <div >
                     <div class="row">
                         <div class="col-sm-6">
                             <input type="text" name="longitude" id="longitude" class="form-control" required><br>
