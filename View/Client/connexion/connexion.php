@@ -25,7 +25,7 @@
                         <p>Creez votre compte
                             artisans gratuitement!!</p>
                         <div class="container">
-                            <a href="../creation_compte.php">Creer un compte</a>
+                            <a href="../creation_compte">Creer un compte</a>
                         </div>
                     </div>
                     <div class="btn">
@@ -75,12 +75,12 @@
                                     Continuez avec google
                                 </a>
                             </div>
-                            <div id="pass_oubie"><a href="../modif_password.php">Mot de passe oublié?</a></div>
+                            <div id="pass_oubie"><a href="../modif_password">Mot de passe oublié?</a></div>
                             <div id="connexion">
                                 <button name="login">Connexion</button>
 
                             </div>
-                            <a href="../../../accueil.php" class="btn btn-default">Revenir à la page d'accueil</a>
+                            <a href="../../../accueil" class="btn btn-default">Revenir à la page d'accueil</a>
                         </form>
                     </div>
                 </div>

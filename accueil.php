@@ -36,7 +36,7 @@
                 <li><a href="#avantage">avantage</a></li>
                 <li><a href="#avis">avis</a></li>
                 <li id="connexion">
-                    <a href="View/Client/connexion/connexion.php" class="login">Connexion</a>
+                    <a href="View/Client/connexion/connexion" class="login">Connexion</a>
                 </li>
             </ul>
         </nav>
@@ -60,12 +60,12 @@
         <!-- recherche artisans et connection pour ecran mobile-->
         <div class="recherche btn_connexion">
             <button class="btn apparaitre">
-                <a href="View/Client/publication.php" style="text-decoration: none;display:block">
+                <a href="View/Client/publication" style="text-decoration: none;display:block">
                     Recherche d'artisans
                 </a>
             </button>
             <button id="connexion-mobile">
-                <a href="View/Client/connexion/connexion.php" style="text-decoration: none;display:block">Connexion</a>
+                <a href="View/Client/connexion/connexion" style="text-decoration: none;display:block">Connexion</a>
             </button>
         </div>
     </header>
@@ -298,41 +298,41 @@
 
                     <?php
                     if ($email_error) { ?>
-                    <script>
-                    Swal.fire({
-                        imageUrl: "Public/image/512.webp",
-                        title: "Oops...",
-                        text: "<?php echo $email_error ?>",
-                        imageWidth: 100,
-                        imageHeight: 100,
-                    });
-                    </script>
+                        <script>
+                            Swal.fire({
+                                imageUrl: "Public/image/512.webp",
+                                title: "Oops...",
+                                text: "<?php echo $email_error ?>",
+                                imageWidth: 100,
+                                imageHeight: 100,
+                            });
+                        </script>
                     <?php } ?>
 
                     <?php
                     if ($email_save) { ?>
-                    <script>
-                    Swal.fire({
-                        imageUrl: "Public/image/512 (3).webp",
-                        title: "Félicitation",
-                        text: "<?php echo $email_save ?>",
-                        imageWidth: 100,
-                        imageHeight: 100,
-                    });
-                    </script>
+                        <script>
+                            Swal.fire({
+                                imageUrl: "Public/image/512 (3).webp",
+                                title: "Félicitation",
+                                text: "<?php echo $email_save ?>",
+                                imageWidth: 100,
+                                imageHeight: 100,
+                            });
+                        </script>
                     <?php } ?>
 
                     <?php
                     if ($email_exist) { ?>
-                    <script>
-                    Swal.fire({
-                        imageUrl: "Public/image/512 (1).webp",
-                        title: "Déjà existant",
-                        text: "<?php echo $email_exist ?>",
-                        imageWidth: 100,
-                        imageHeight: 100,
-                    });
-                    </script>
+                        <script>
+                            Swal.fire({
+                                imageUrl: "Public/image/512 (1).webp",
+                                title: "Déjà existant",
+                                text: "<?php echo $email_exist ?>",
+                                imageWidth: 100,
+                                imageHeight: 100,
+                            });
+                        </script>
                     <?php } ?>
                 </div>
             </div>

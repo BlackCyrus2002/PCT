@@ -47,7 +47,7 @@
                 <div class="formation_content">
                     <div class="scroll_tag">
                         <?php while ($fil = mysqli_fetch_array($coiff)) { ?>
-                        <a href="profil_artisans.php?id_art=<?php echo $fil['ID'] ?>&& nom=<?php echo $fil['nom'] . ' ' . $fil['prenom'] ?>"
+                        <a href="profil_artisans?id_art=<?php echo $fil['ID'] ?>&& nom=<?php echo $fil['nom'] . ' ' . $fil['prenom'] ?>"
                             style="color: black;text-decoration:none">
                             <div class="div_scroll" target="_blank">
                                 <center>
@@ -150,7 +150,7 @@
                 <div class="formation_content">
                     <div class="scroll_tag">
                         <?php while ($fil = mysqli_fetch_array($cout)) { ?>
-                        <a href="profil_artisans.php?id_art=<?php echo $fil['ID'] ?>&& nom=<?php echo $fil['nom'] . ' ' . $fil['prenom'] ?></a>"
+                        <a href="profil_artisans?id_art=<?php echo $fil['ID'] ?>&& nom=<?php echo $fil['nom'] . ' ' . $fil['prenom'] ?></a>"
                             style="color: black;text-decoration:none">
                             <div class="div_scroll" target="_blank">
                                 <center>
@@ -253,7 +253,7 @@
                 <div class="formation_content">
                     <div class="scroll_tag">
                         <?php while ($fil = mysqli_fetch_array($menu)) { ?>
-                        <a href="profil_artisans.php?id_art=<?php echo $fil['ID'] ?>&& nom=<?php echo $fil['nom'] . ' ' . $fil['prenom'] ?>"
+                        <a href="profil_artisans?id_art=<?php echo $fil['ID'] ?>&& nom=<?php echo $fil['nom'] . ' ' . $fil['prenom'] ?>"
                             style="color: black;text-decoration:none">
                             <div class="div_scroll" target="_blank">
                                 <center>
@@ -356,7 +356,7 @@
                 <div class="row">
                     <?php while ($fil = mysqli_fetch_array($user)) { ?>
                     <div class="col-xl-3 col-md-4" style="margin-bottom: 20px;">
-                        <a href="profil_artisans.php?id_art=<?php echo $fil['ID'] ?>&& nom=<?php echo $fil['nom'] . ' ' . $fil['prenom'] ?>"
+                        <a href="profil_artisans?id_art=<?php echo $fil['ID'] ?>&& nom=<?php echo $fil['nom'] . ' ' . $fil['prenom'] ?>"
                             style="color: black;text-decoration:none">
                             <div class="contact">
                                 <center>
