@@ -113,6 +113,28 @@
 
         map.addControl(searchControl);
 
+        // Ajouter un marqueur pour la position actuelle de l'utilisateur
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var userLat = position.coords.latitude;
+                var userLon = position.coords.longitude;
+
+                var userMarker = L.marker([userLat, userLon], {
+                    icon: L.icon({
+                        iconUrl: 'https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png',
+                        iconSize: [45, 45],
+                        iconAnchor: [12, 41],
+                        popupAnchor: [1, -34],
+                        shadowSize: [41, 41]
+                    })
+                }).addTo(map).bindPopup("Moi").openPopup();
+
+                map.setView([userLat, userLon], mapOptions.zoom);
+            });
+        } else {
+            alert("La géolocalisation n'est pas prise en charge par ce navigateur.");
+        }
+
     }
 
     document.addEventListener('DOMContentLoaded', initMap);
